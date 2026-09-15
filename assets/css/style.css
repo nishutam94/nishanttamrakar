@@ -39,6 +39,21 @@ html, body {
   background-color: #196fc2;
 }
 
+.skills-strip {
+  margin: 42px auto 0;
+  max-width: 900px;
+  color: #777;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  line-height: 2.2;
+  text-transform: uppercase;
+}
+
+.skills-strip span {
+  display: inline-block;
+  margin: 0 8px;
+}
+
 /* 
  * Button
  */

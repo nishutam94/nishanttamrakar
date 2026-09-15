@@ -7,3 +7,11 @@ Version: 1
 Author: Pixel Perfect Team
 Author URI: http://pixelperfect.mk/
 Keywords: HTML, CSS, Bootstrap, Responsive, Javascript, jQuery, Parallax, Portfolio, CV, Resume
+
+## Public-content boundary
+
+This repository is intended for public portfolio content only. Do not add
+customer information, internal hostnames or paths, credentials, raw telemetry,
+unpublished benchmark results, proprietary architecture details, or exported
+contact messages. Keep project descriptions at the level of public methods,
+tools, and sanitized engineering lessons.
