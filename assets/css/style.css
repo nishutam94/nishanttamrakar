@@ -2309,34 +2309,6 @@ body {
   line-height: 1.8;
 }
 
-.hero-actions {
-  margin-top: 34px;
-}
-
-.hero-actions .btn {
-  display: inline-block;
-  width: auto;
-  margin: 6px 4px;
-  padding: 13px 18px;
-  border: 1px solid #42b883;
-  background-color: #42b883;
-  color: #10201b;
-  font-size: 11px;
-  letter-spacing: 1px;
-}
-
-.hero-actions .btn-outline {
-  background-color: transparent;
-  color: #ffffff;
-}
-
-.hero-actions .btn:hover,
-.hero-actions .btn:focus {
-  border-color: #ffffff;
-  background-color: #ffffff;
-  color: #10201b;
-}
-
 .site-navigation {
   background-color: #101820;
 }
@@ -2344,6 +2316,30 @@ body {
 .site-logo a,
 .site-navigation .navbar-nav > li > a {
   letter-spacing: 1px;
+}
+
+.site-navigation .navbar-nav > li.nav-social + li.nav-social > a {
+  margin-left: 12px;
+}
+
+.site-navigation .navbar-nav > li.nav-social > a {
+  padding-bottom: 21px;
+  font-size: 16px;
+  border-bottom: 2px solid transparent;
+}
+
+.site-navigation .navbar-nav > li.nav-social > a:hover {
+  border-color: #42b883;
+}
+
+@media only screen and (max-width: 767px) {
+  .site-navigation .navbar-nav > li.nav-social {
+    display: inline-block;
+  }
+
+  .site-navigation .navbar-nav > li.nav-social + li.nav-social > a {
+    margin-left: 6px;
+  }
 }
 
 .section-hello,
