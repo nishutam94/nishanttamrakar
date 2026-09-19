@@ -1556,6 +1556,76 @@ html, body {
   text-transform: uppercase;
 }
 
+/* Section: Resume */
+.section-resume {
+  background-color: #ffffff;
+}
+
+.resume-grid {
+  margin-top: 50px;
+}
+
+.resume-panel {
+  background-color: #f6f6f6;
+  border-top: 3px solid #196fc2;
+  margin-bottom: 30px;
+  padding: 25px 30px;
+}
+
+.resume-panel h3 {
+  color: #196fc2;
+  font-size: 20px;
+  margin: 0 0 10px;
+  text-transform: uppercase;
+}
+
+.resume-panel h4 {
+  color: #333;
+  font-size: 15px;
+  line-height: 1.5;
+  margin: 0 0 8px;
+}
+
+.resume-panel p {
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.resume-meta {
+  color: #777;
+  font-size: 12px !important;
+  line-height: 1.5 !important;
+  margin: 0 0 15px;
+}
+
+.resume-list {
+  margin: 0;
+  padding-left: 18px;
+}
+
+.resume-list li {
+  color: #555;
+  font-size: 13px;
+  line-height: 1.7;
+  margin-bottom: 10px;
+}
+
+.resume-entry + .resume-entry {
+  border-top: 1px solid #dddddd;
+  margin-top: 20px;
+  padding-top: 20px;
+}
+
+.thesis-panel {
+  margin-top: 0;
+}
+
+@media only screen and (max-width: 767px) {
+  .resume-panel {
+    padding: 20px;
+  }
+}
+
 .timeline {
   margin: 50px 0 0;
   padding-left: 0;
