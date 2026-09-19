@@ -7,11 +7,11 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <title>Nishant Tamrakar | ML and Systems Performance Engineer</title>
+    <title>Nishant Tamrakar | Systems Performance Engineer</title>
 
-    <meta name="description" content="Nishant Tamrakar is an ML and systems performance engineer focused on inference optimization, MLC benchmarking, platform debugging, and automation.">
+    <meta name="description" content="Nishant Tamrakar is a systems performance engineer focused on CPU architecture, workload characterization, benchmarking, telemetry, and ML inference performance.">
     <meta name="author" content="Nishant Tamrakar">
-    <meta name="keywords" content="ML optimization, MLC benchmarking, OpenVINO, TensorFlow, platform debugging, EMON, systems engineering">
+    <meta name="keywords" content="systems performance, CPU performance, Intel Xeon, workload characterization, MLC, EMON, PMU, ML inference, Linux">
 
     <!-- Mobile Specific Metas
     ================================================== -->
@@ -56,9 +56,16 @@
     
         <!-- Name & Description -->
         <div class="hero-content">
-            <h1>Hi, I am Nishant</h1>
-            <p class="hero-job"><span>ML AND SYSTEMS PERFORMANCE ENGINEER</span></p>
-            <p class="hero-job-desc">I OPTIMIZE INFERENCE, BENCHMARK PLATFORMS, AND DEBUG THE SYSTEMS BEHIND THE NUMBERS.</p>
+            <h1>Nishant Tamrakar</h1>
+            <p class="hero-job"><span>SYSTEMS PERFORMANCE ENGINEER</span></p>
+            <p class="hero-job-desc">CPU <span class="hero-separator">•</span> WORKLOAD <span class="hero-separator">•</span> PLATFORM <span class="hero-separator">•</span> PERFORMANCE</p>
+            <p class="hero-summary">I analyze how workloads behave on modern server platforms, using controlled experiments, hardware performance counters, system telemetry, and workload characterization to identify bottlenecks and improve performance.</p>
+            <div class="hero-actions">
+                <a href="#works" class="btn">View Selected Work</a>
+                <a href="#experience" class="btn btn-outline">View Experience</a>
+                <a href="https://github.com/nishutam94" class="btn btn-outline" target="_blank" rel="noopener">GitHub</a>
+                <a href="https://www.linkedin.com/in/nishant-tamrakar/" class="btn btn-outline" target="_blank" rel="noopener">LinkedIn</a>
+            </div>
 
         </div><!-- /.hero-content -->
 
@@ -94,12 +101,11 @@
                     <ul class="nav navbar-nav navbar-right">
 
                         <li class="page-scroll"><a href="#top">Home</a></li>
-                        <li class="page-scroll"><a href="#intro">Focus</a></li>
-                        <li class="page-scroll"><a href="#about">Expertise</a></li>
-                        <li class="page-scroll"><a href="#services">Capabilities</a></li>
-                        <!-- li class="page-scroll"><a href="#team">Team</a></li -->
-                        <li class="page-scroll"><a href="#history">Experience</a></li>
+                        <li class="page-scroll"><a href="#expertise">Expertise</a></li>
+                        <li class="page-scroll"><a href="#methodology">Methodology</a></li>
                         <li class="page-scroll"><a href="#works">Selected Work</a></li>
+                        <li class="page-scroll"><a href="#experience">Experience</a></li>
+                        <li class="page-scroll"><a href="#stack">Systems Stack</a></li>
                         <li class="page-scroll"><a href="#contact">Contact</a></li>
                         
                     </ul><!-- /.navbar-nav -->
@@ -114,25 +120,25 @@
     <main id="main" class="site-main">
 
         <!-- Hello section -->
-		<section class="site-section section-hello" id="intro">
+        <section class="site-section section-hello" id="intro">
 			<div class="container">
-                <h2>PERFORMANCE, FROM MODEL TO PLATFORM</h2>
-                <p class="section-subtitle"><span>OPTIMIZE THE WORKLOAD. EXPLAIN THE SYSTEM.</span></p>
+                <h2>WORKLOAD TO ROOT CAUSE</h2>
+                <p class="section-subtitle"><span>MEASURE THE SYSTEM. EXPLAIN THE RESULT.</span></p>
 				<div class="row">
 					<div class="col-sm-4">
 						<div class="main-service text-left">
 							<div class="rectangle">
 								<i class="fa fa-calendar" aria-hidden="true"></i>
 							</div><!-- /.rectangle -->
-                            <h3>Optimize the model</h3>
-                            <p>I improve inference through graph optimization, operator pruning, feature fusion, and hybrid precision.</p>
+                            <h3>Characterize the workload</h3>
+                            <p>I establish workload behavior, scaling, latency, throughput, and sensitivity before interpreting platform data.</p>
 						</div><!-- /.main-service -->
                         <div class="main-service text-left">
                             <div class="rectangle">
                                 <i class="fa fa-comments" aria-hidden="true"></i>
                             </div>
-                            <h3>Benchmark the platform</h3>
-                            <p>I build repeatable MLC and workload studies that connect throughput, latency, bandwidth, and system state.</p>
+                            <h3>Measure the platform</h3>
+                            <p>I connect application results to CPU utilization, IPC, frequency, cache, memory bandwidth, NUMA, and power.</p>
                         </div><!-- /.main-service -->
 					</div>
 					<div class="col-sm-4">
@@ -146,15 +152,15 @@
                             <div class="rectangle">
                                 <i class="fa fa-check" aria-hidden="true"></i>
                             </div>
-                            <h3>Debug the system</h3>
-                            <p>I trace regressions and bottlenecks across CPU, memory, storage, networking, PCIe, and virtualization.</p>
+                            <h3>Find the bottleneck</h3>
+                            <p>I use EMON, PMU counters, TMA signals, and controlled experiments to separate symptoms from limiting subsystems.</p>
                         </div><!-- /.main-service -->
 						<div class="main-service text-left">
 							<div class="rectangle">
 								<i class="fa fa-list" aria-hidden="true"></i>
 							</div><!-- /.rectangle -->
-                            <h3>Automate the evidence</h3>
-                            <p>I turn multi-node execution, telemetry, regression checks, and reporting into reliable engineering workflows.</p>
+                            <h3>Validate the change</h3>
+                            <p>I automate execution, telemetry collection, regression checks, and reporting so improvements remain repeatable.</p>
 						</div><!-- /.main-service -->
 					</div>
 				</div>
@@ -171,18 +177,18 @@
         <!-- End Quote section -->
 
         <!-- About section -->
-        <section class="site-section section-about text-center" id="about">
+        <section class="site-section section-about text-center" id="expertise">
             <div class="container">
-                <h2>WHAT I WORK ON</h2>
-                <p class="section-subtitle"><span>FROM MODEL GRAPH TO PLATFORM COUNTER</span></p>
+                <h2>TECHNICAL EXPERTISE</h2>
+                <p class="section-subtitle"><span>CPU, WORKLOAD, TELEMETRY, AND SYSTEMS</span></p>
                 <div class="row">
                     <div class="col-sm-3 col-xs-6">
                         <div class="feature-about">
                             <div class="medium-rectangle rectangle">
                                 <i class="fa fa-laptop" aria-hidden="true"></i>
                             </div><!-- /.rectangle -->
-                            <h3>ML optimization</h3>
-                            <p>TensorFlow and OpenVINO inference optimization using graph pruning, operator fusion, VNNI-aware execution, and FP32/INT8 hybrid precision.</p>
+                            <h3>CPU &amp; platform performance</h3>
+                            <p>Intel Xeon, CPU and frequency scaling, NUMA/SNC, cache behavior, memory bandwidth, uncore, PCIe, and power/performance analysis.</p>
                         </div><!-- /.feature-about -->
                     </div>                    
                     <div class="col-sm-3 col-xs-6">
@@ -190,8 +196,8 @@
                             <div class="medium-rectangle rectangle">
                                 <i class="fa fa-code" aria-hidden="true"></i>
                             </div><!-- /.rectangle -->
-                            <h3>MLC benchmarking</h3>
-                            <p>Micro-benchmark design, memory and cache characterization, workload scaling, and repeatable performance studies across server platforms.</p>
+                            <h3>Performance analysis</h3>
+                            <p>EMON, PMU counters, IPC, TMA, CPU utilization, bandwidth, cache metrics, frequency, power, latency, and throughput.</p>
                         </div><!-- /.feature-about -->
                     </div>                    
                     <div class="col-sm-3 col-xs-6">
@@ -199,17 +205,17 @@
                             <div class="medium-rectangle rectangle">
                                 <i class="fa fa-search" aria-hidden="true"></i>
                             </div><!-- /.rectangle -->
-                            <h3>Debugging and telemetry</h3>
-                            <p>EMON-driven analysis of IPC, TMA, bandwidth, frequency, power, and uncore behavior to turn symptoms into root causes.</p>
+                            <h3>Workload characterization</h3>
+                            <p>MLC, Redis/memtier, Qdrant, ML inference, proxy workloads, microbenchmarks, core scaling, and frequency sensitivity.</p>
                         </div><!-- /.feature-about -->
                     </div>                    
                     <div class="col-sm-3 col-xs-6">
                         <div class="feature-about">
                             <div class="medium-rectangle rectangle">
-                                <i class="fa fa-twitter" aria-hidden="true"></i>
+                                <i class="fa fa-cogs" aria-hidden="true"></i>
                             </div><!-- /.rectangle -->
-                            <h3>Automation and validation</h3>
-                            <p>Python, Linux, Bash, and distributed execution for health checks, regression testing, proxy workloads, and report generation.</p>
+                            <h3>Systems, ML &amp; automation</h3>
+                            <p>Linux kernel, drivers, networking, storage, QEMU/KVM, TDX, TensorFlow, OpenVINO, PyTorch, MXNet, Python, Bash, and multi-node validation.</p>
                         </div><!-- /.feature-about -->
                     </div>
                 </div>
@@ -228,12 +234,12 @@
         
         <!-- End Counters section -->
 
-        <!-- Services section -->
-        <section class="site-section section-services" id="services">
+        <!-- Technical expertise section -->
+        <section class="site-section section-services" id="methodology">
 
             <div class="container-fluid">
-                <h2>CAPABILITIES</h2>
-                <p class="section-subtitle"><span>ENGINEERING WORK THAT HOLDS UP UNDER QUESTIONS</span></p>
+                <h2>HOW I INVESTIGATE PERFORMANCE</h2>
+                <p class="section-subtitle"><span>WORKLOAD TO HARDWARE BEHAVIOR TO VALIDATION</span></p>
             </div>
 
             <div class="container">
@@ -254,7 +260,7 @@
                                     <div class="rectangle">
                                         <i class="fa fa-laptop" aria-hidden="true"></i>
                                     </div>
-                                    <p class="hidden-xs">ML optimization</p>
+                                    <p class="hidden-xs">Workload</p>
                                 </div>
                             </div>
                         </a><!-- /.item -->
@@ -264,7 +270,7 @@
                                     <div class="rectangle">
                                         <i class="fa fa-code" aria-hidden="true"></i>
                                     </div>
-                                    <p class="hidden-xs">MLC benchmarking</p>
+                                    <p class="hidden-xs">Baseline</p>
                                 </div>
                             </div>
                         </a><!-- /.item -->
@@ -274,7 +280,7 @@
                                     <div class="rectangle">
                                         <i class="fa fa-mobile" aria-hidden="true"></i>
                                     </div>
-                                    <p class="hidden-xs">Systems debugging</p>
+                                    <p class="hidden-xs">Experiment</p>
                                 </div>
                             </div>
                         </a><!-- /.item -->
@@ -284,7 +290,7 @@
                                     <div class="rectangle">
                                         <i class="fa fa-search" aria-hidden="true"></i>
                                     </div>
-                                    <p class="hidden-xs">Telemetry and regression</p>
+                                    <p class="hidden-xs">Telemetry</p>
                                 </div>
                             </div>
                         </a><!-- /.item -->
@@ -292,9 +298,9 @@
                             <div class="col-xs-4 col-sm-fifth">
                                 <div class="service">
                                     <div class="rectangle">
-                                        <i class="fa fa-twitter" aria-hidden="true"></i>
+                                        <i class="fa fa-cogs" aria-hidden="true"></i>
                                     </div>
-                                    <p class="hidden-xs">Automation and validation</p>
+                                    <p class="hidden-xs">Validation</p>
                                 </div>
                             </div>
                         </a><!-- /.item -->
@@ -307,8 +313,8 @@
                             <div class="row">
                                 <div class="col-md-5">
                                     <div class="service-info">
-                                        <h3 class="service-title">ML optimization</h3>
-                                        <p>I optimize inference pipelines for recommendation and language models. My work spans TensorFlow graph execution, unused-op pruning, feature fusion, VNNI-aware kernels, and OpenVINO hybrid precision to improve throughput without giving away model quality.</p>
+                                        <h3 class="service-title">Workload &amp; baseline</h3>
+                                        <p>I begin with workload characterization and a stable baseline: throughput, latency, CPU utilization, core scaling, frequency behavior, memory bandwidth, and power.</p>
                                     </div>
                                 </div>
                                 <div class="col-md-7">
@@ -321,8 +327,8 @@
                             <div class="row">
                                 <div class="col-md-5">
                                     <div class="service-info">
-                                        <h3 class="service-title">MLC benchmarking</h3>
-                                        <p>I design micro-benchmarks and proxy workloads to expose cache, memory, bandwidth, and latency behavior. Each study has controlled inputs, a known platform state, and results that can be compared across runs.</p>
+                                        <h3 class="service-title">Controlled experiment</h3>
+                                        <p>I vary one meaningful dimension at a time, such as core count, NUMA placement, frequency, workload size, or precision, while keeping platform state and run conditions explicit.</p>
                                     </div>
                                 </div>
                                 <div class="col-md-7">
@@ -335,8 +341,8 @@
                             <div class="row">
                                 <div class="col-md-5">
                                     <div class="service-info">
-                                        <h3 class="service-title">Systems debugging</h3>
-                                        <p>I debug performance issues from workload behavior down to platform components, including memory, storage, networking, PCIe, virtualization, and kernel-facing accelerator paths.</p>
+                                        <h3 class="service-title">Telemetry &amp; hardware behavior</h3>
+                                        <p>I correlate application behavior with EMON, PMU counters, IPC, TMA, cache, memory, frequency, uncore, I/O, and power signals to identify the limiting subsystem.</p>
                                     </div>
                                 </div>
                                 <div class="col-md-7">
@@ -349,8 +355,8 @@
                             <div class="row">
                                 <div class="col-md-5">
                                     <div class="service-info">
-                                        <h3 class="service-title">Telemetry and regression</h3>
-                                        <p>I combine EMON, health monitoring, and cycle-to-cycle regression testing to isolate root causes across more than 300 KPIs. The output is a defensible performance narrative, not just a chart.</p>
+                                        <h3 class="service-title">Root cause &amp; optimization</h3>
+                                        <p>I turn the measured bottleneck into a testable hypothesis, then evaluate system tuning, workload changes, graph optimization, operator pruning, feature fusion, or FP32/INT8 trade-offs.</p>
                                     </div>
                                 </div>
                                 <div class="col-md-7">
@@ -363,8 +369,8 @@
                             <div class="row">
                                 <div class="col-md-5">
                                     <div class="service-info">
-                                        <h3 class="service-title">Automation and validation</h3>
-                                        <p>I build Python and Linux automation for multi-framework ML workloads, multi-node system health, test creation, workload profiling, proxy validation, and report generation from a single repeatable flow.</p>
+                                        <h3 class="service-title">Validation</h3>
+                                        <p>I repeat the experiment, compare against the baseline, check regression behavior, and preserve telemetry and report artifacts so the result can withstand review.</p>
                                     </div>
                                 </div>
                                 <div class="col-md-7">
@@ -374,24 +380,66 @@
                         </div><!-- /.item -->
                     </div><!-- /.carousel-inner -->
                 </div><!-- /.carousel -->
+                <div class="method-flow" aria-label="Performance investigation flow">
+                    <span>Workload</span><i>→</i><span>Baseline</span><i>→</i><span>Controlled experiment</span><i>→</i><span>Telemetry / EMON</span><i>→</i><span>Root cause</span><i>→</i><span>Optimization</span><i>→</i><span>Validation</span>
+                </div>
             </div>
-        </section><!-- /.section-services -->
-        <!-- End Services section -->
+        </section><!-- /.section-methodology -->
+        <!-- End Methodology section -->
+
+        <!-- Performance metrics section -->
+        <section class="site-section section-metrics" id="metrics">
+            <div class="container">
+                <h2>PERFORMANCE METRICS</h2>
+                <p class="section-subtitle"><span>APPLICATION SIGNALS CORRELATED WITH PLATFORM BEHAVIOR</span></p>
+                <div class="metrics-flow">
+                    <div class="metric-layer"><strong>Application</strong><span>Throughput / RPS / IOPS / Latency</span></div>
+                    <div class="metric-arrow">↓</div>
+                    <div class="metric-layer"><strong>CPU</strong><span>Utilization / IPC / Frequency / TMA</span></div>
+                    <div class="metric-arrow">↓</div>
+                    <div class="metric-layer"><strong>Memory</strong><span>Bandwidth / Latency / NUMA</span></div>
+                    <div class="metric-arrow">↓</div>
+                    <div class="metric-layer"><strong>Cache</strong><span>L1 / L2 / LLC / MPI</span></div>
+                    <div class="metric-arrow">↓</div>
+                    <div class="metric-layer"><strong>Platform</strong><span>Uncore / PCIe / I/O</span></div>
+                    <div class="metric-arrow">↓</div>
+                    <div class="metric-layer"><strong>Power</strong><span>Package power / Performance-per-watt</span></div>
+                </div>
+            </div>
+        </section>
+        <!-- End Performance metrics section -->
+
+        <!-- Systems stack section -->
+        <section class="site-section section-stack" id="stack">
+            <div class="container">
+                <h2>SYSTEMS STACK</h2>
+                <p class="section-subtitle"><span>THE COMPLETE PATH FROM APPLICATION TO TELEMETRY</span></p>
+                <div class="stack-grid">
+                    <div class="stack-layer"><span class="stack-index">01</span><div><h3>Application</h3><p>ML / Databases / Vector Search / Proxy Workloads</p></div></div>
+                    <div class="stack-layer"><span class="stack-index">02</span><div><h3>Runtime</h3><p>TensorFlow / OpenVINO / Redis / Qdrant</p></div></div>
+                    <div class="stack-layer"><span class="stack-index">03</span><div><h3>Operating system</h3><p>Linux / Linux kernel / Device drivers</p></div></div>
+                    <div class="stack-layer"><span class="stack-index">04</span><div><h3>Virtualization</h3><p>QEMU / KVM / TDX</p></div></div>
+                    <div class="stack-layer"><span class="stack-index">05</span><div><h3>Hardware</h3><p>Intel Xeon / CPU / Cache / Memory / Uncore / PCIe</p></div></div>
+                    <div class="stack-layer"><span class="stack-index">06</span><div><h3>Telemetry</h3><p>EMON / PMU / TMA / Performance Counters</p></div></div>
+                </div>
+            </div>
+        </section>
+        <!-- End Systems stack section -->
 
         <!-- Reviews section -->
         
         <!-- End Reviews section -->
 
-        <!-- Team section -->
+        <!-- Reserved profile section -->
         
-        <!-- End Team section -->
+        <!-- End reserved profile section -->
 
         <!-- History section --> 
-        <section class="section-history" id="history">
+        <section class="section-history" id="experience">
             <div class="container">          
                 <div class="text-center section-diff-title">     
                     <h2>EXPERIENCE AND PRACTICE</h2>
-                    <p>BUILDING SYSTEMS KNOWLEDGE THROUGH ENGINEERING WORK</p>
+                    <p>PROGRESSION FROM SYSTEMS TO PERFORMANCE TO PLATFORM TO ML</p>
                 </div> 
                 <!-- Timeline --> 
                 <ul class="timeline">
@@ -417,6 +465,7 @@
                                     <img src="assets/img/timeline-img.jpg" class="img-res" alt="">
                                 </div><!-- /.timeline-body-thumb -->
                                 <p>Optimized TensorFlow recommendation models and OpenVINO BERT inference with graph pruning, feature fusion, VNNI-aware execution, and hybrid FP32/INT8 precision. Improved FP32 throughput by up to 30% and BERT inference speed by 15% with minimal accuracy loss.</p>
+                                <p class="timeline-tools">TensorFlow / OpenVINO / VNNI / FP32 / INT8 / EMON</p>
                             </div><!-- /.timeline-body -->
                         </div><!-- /.timeline-panel -->
                     </li>
@@ -443,6 +492,7 @@
                                     <img src="assets/img/timeline-img.jpg" class="img-res" alt="">
                                 </div><!-- /.timeline-body-thumb -->
                                 <p>Designed Linux kernel and IP-level micro-benchmarks, developed real-world proxy workloads, and collaborated across engineering teams to validate functionality and performance. Debugged more than four showstopper issues across multiple server generations.</p>
+                                <p class="timeline-tools">Linux kernel / Micro-benchmarks / Proxy workloads / Debugging</p>
                             </div><!-- /.timeline-body -->
                         </div><!-- /.timeline-panel -->
                     </li><!-- /.timeline-inverted -->
@@ -468,6 +518,7 @@
                                     <img src="assets/img/timeline-img.jpg" class="img-res" alt="">
                                 </div><!-- /.timeline-body-thumb -->
                                 <p>Built multi-framework ML automation for TensorFlow, MXNet, and PyTorch, keeping 10+ nodes healthy from a single master node and resolving bottlenecks across more than 300 performance KPIs.</p>
+                                <p class="timeline-tools">Python / Bash / Linux / Multi-node execution / Regression testing</p>
                             </div><!-- /.timeline-body -->
                         </div><!-- /.timeline-panel -->
                     </li>
@@ -509,8 +560,8 @@
         <!-- Portfolio/Works section --> 
         <section class="site-section section-works" id="works">
             <div class="container">
-                <h2>RECENT WORKS</h2>
-                <p class="section-subtitle"><span>SELECTED PERFORMANCE AND AUTOMATION WORK</span></p>
+                <h2>SELECTED ENGINEERING WORK</h2>
+                <p class="section-subtitle"><span>PROBLEM, MEASUREMENT, ROOT CAUSE, VALIDATION</span></p>
 
                 <div class="portfolio">
                     <ul class="portfolio-sorting list-inline">
@@ -532,8 +583,8 @@
                                     </a>
                                 </div><!-- /.portfolio-item-thumb  -->
                                 <div class="portfolio-info">
-                                    <h3>ML inference optimization</h3>
-                                    <p>TensorFlow and OpenVINO</p>
+                                    <h3>CPU scaling &amp; platform characterization</h3>
+                                    <p>Core scaling and telemetry</p>
                                 </div><!-- /.portfolio-info  -->
                             </div>
                         </div><!-- /.col-md-3  -->
@@ -547,8 +598,8 @@
                                     </a>
                                 </div><!-- /.portfolio-item-thumb  -->
                                 <div class="portfolio-info">
-                                    <h3>MLC benchmark studies</h3>
-                                    <p>Memory, cache, and bandwidth</p>
+                                    <h3>Redis / memtier performance</h3>
+                                    <p>Throughput, frequency, and power</p>
                                 </div><!-- /.portfolio-info  -->
                             </div>
                         </div><!-- /.col-md-3  -->
@@ -562,8 +613,8 @@
                                     </a>
                                 </div><!-- /.portfolio-item-thumb  -->
                                 <div class="portfolio-info">
-                                    <h3>Platform debugging</h3>
-                                    <p>Regression and root cause</p>
+                                    <h3>Qdrant / vector database</h3>
+                                    <p>Query throughput and cache</p>
                                 </div><!-- /.portfolio-info  -->
                             </div>
                         </div><!-- /.col-md-3  -->
@@ -577,8 +628,8 @@
                                     </a>
                                 </div>
                                 <div class="portfolio-info">
-                                    <h3>Proxy workload validation</h3>
-                                    <p>Micro-benchmark engineering</p>
+                                    <h3>MLC memory characterization</h3>
+                                    <p>Latency, bandwidth, and cache</p>
                                 </div>
                             </div>
                         </div>
@@ -591,8 +642,8 @@
                                     </a>
                                 </div>
                                 <div class="portfolio-info">
-                                    <h3>Multi-node ML automation</h3>
-                                    <p>Execution and system health</p>
+                                    <h3>ML inference performance</h3>
+                                    <p>Graph and precision optimization</p>
                                 </div>
                             </div>
                         </div>
@@ -605,8 +656,8 @@
                                     </a>
                                 </div>
                                 <div class="portfolio-info">
-                                    <h3>Telemetry-led analysis</h3>
-                                    <p>300+ performance KPIs</p>
+                                    <h3>Platform / kernel debugging</h3>
+                                    <p>Linux, PCIe, and virtualization</p>
                                 </div>
                             </div>
                         </div>
@@ -619,8 +670,8 @@
                                     </a>
                                 </div>
                                 <div class="portfolio-info">
-                                    <h3>Kernel micro-benchmarks</h3>
-                                    <p>Functionality and performance</p>
+                                    <h3>Multi-node automation</h3>
+                                    <p>Health, telemetry, and regression</p>
                                 </div>
                             </div>
                         </div>
@@ -633,7 +684,7 @@
                                     </a>
                                 </div>
                                 <div class="portfolio-info">
-                                    <h3>Performance investigations</h3>
+                                    <h3>Performance reporting</h3>
                                     <p>Evidence-based decisions</p>
                                 </div>
                             </div>
@@ -648,47 +699,33 @@
         <!-- Me section --> 
         <section class="section-background section-me background-overlay text-center">
             <div class="container page-scroll">
-                <h2>LET'S MAKE THE RESULT CLEARER</h2>
-                <p>Have a platform, workload, or benchmark question?</p>
-                <a href="#contact" class="btn">Start a conversation</a>
+                <h2>TRACE THE RESULT TO THE SYSTEM</h2>
+                <p>Workload, platform, or benchmark analysis grounded in evidence.</p>
+                <a href="#works" class="btn">View engineering work</a>
             </div>
         </section><!-- /.section-me -->
         <!-- End Me section --> 
 
-        <!-- Clients section --> 
+        <!-- Reserved client section -->
       
-        <!-- End Clients section --> 
+        <!-- End reserved client section -->
 
-        <!-- Twitter section --> 
+        <!-- Reserved social feed section -->
 
-        <!-- End Twitter section --> 
+        <!-- End reserved social feed section -->
 
         <!-- Contacts section --> 
 
 
         <section class="site-section section-contact" id="contact">
             <div class="container">
-                <h2>CONTACT</h2>
-                <p class="section-subtitle"><span>LET'S TALK ABOUT THE SYSTEM BEHIND THE NUMBER</span></p>
-                <div class="row">
-                    <form>
-                        <div class="col-md-4">
-                            <input class="form-control" type="text" placeholder="Your name" required>
-                        </div>
-                        <div class="col-md-4">
-                            <input class="form-control" type="email" placeholder="Your email" required>
-                        </div>
-                        <div class="col-md-4">
-                            <input class="form-control" type="text" placeholder="What are you working on?" required>
-                        </div>
-                        <div class="col-sm-12">
-                            <textarea class="form-control" placeholder="Tell me about the platform, workload, or performance question."  required></textarea>
-                        </div>
-
-                        <div class="col-sm-12">
-                            <button class="btn btn-inverted" type="submit">Send Message</button>
-                        </div>  
-                    </form>
+                <h2>LET'S DISCUSS PERFORMANCE ENGINEERING</h2>
+                <p class="section-subtitle"><span>WORKLOADS, PLATFORMS, AND ROOT CAUSE</span></p>
+                <div class="contact-links">
+                    <a href="https://github.com/nishutam94" target="_blank" rel="noopener"><i class="fa fa-github" aria-hidden="true"></i><span>GitHub</span></a>
+                    <a href="https://www.linkedin.com/in/nishant-tamrakar/" target="_blank" rel="noopener"><i class="fa fa-linkedin" aria-hidden="true"></i><span>LinkedIn</span></a>
+                    <span class="contact-link"><i class="fa fa-envelope" aria-hidden="true"></i><span>Email available on request</span></span>
+                    <a href="#experience"><i class="fa fa-file-text-o" aria-hidden="true"></i><span>Experience</span></a>
                 </div>
             </div>
         </section><!-- /.section-contact-->
@@ -720,12 +757,11 @@
 
             <ul class="list-unstyled list-inline">
                 <li class="page-scroll"><a href="#top">Home</a></li>
-                <li class="page-scroll"><a href="#intro">Focus</a></li>
-                <li class="page-scroll"><a href="#about">Expertise</a></li>
-                <li class="page-scroll"><a href="#services">Capabilities</a></li>
-                <!-- li class="page-scroll"><a href="#team">Team</a></li -->
-                <li class="page-scroll"><a href="#history">Experience</a></li>
+                <li class="page-scroll"><a href="#expertise">Expertise</a></li>
+                <li class="page-scroll"><a href="#methodology">Methodology</a></li>
                 <li class="page-scroll"><a href="#works">Selected Work</a></li>
+                <li class="page-scroll"><a href="#experience">Experience</a></li>
+                <li class="page-scroll"><a href="#stack">Systems Stack</a></li>
                 <li class="page-scroll"><a href="#contact">Contact</a></li>
             </ul>
 
@@ -753,8 +789,8 @@
                     <img class="img-res" src="assets/img/portfolio-1.jpg" alt="">
                 </div>
                 <div class="modal-body">
-                    <h4 class="modal-title">ML inference optimization</h4>
-                    <p>Graph-level optimization for wide-and-deep recommendation models in TensorFlow and BERT in OpenVINO, using operator pruning, feature fusion, VNNI-aware execution, and hybrid FP32/INT8 precision. Improved FP32 throughput by up to 30% and BERT inference speed by 15% with minimal accuracy loss.</p>
+                    <h4 class="modal-title">CPU scaling and platform characterization</h4>
+                    <p>Characterized workload scaling from low to high core counts using throughput, CPU utilization, memory bandwidth, frequency, NUMA/SNC behavior, and EMON telemetry to determine whether the workload was CPU-, memory-, or platform-limited.</p>
                 </div>
                 <div class="modal-footer">
                     <a href="https://github.com/nishutam94/nishanttamrakar" class="btn" target="_blank" rel="noopener">View public portfolio repository</a>
@@ -771,8 +807,8 @@
                     <img class="img-res" src="assets/img/portfolio-2.jpg" alt="">
                 </div>
                 <div class="modal-body">
-                    <h4 class="modal-title">MLC benchmark studies</h4>
-                    <p>Micro-benchmark and proxy-workload studies that characterize cache, memory latency, bandwidth, frequency, and system behavior. Results are designed for repeatable comparison and clear bottleneck diagnosis.</p>
+                    <h4 class="modal-title">Redis and memtier performance</h4>
+                    <p>Investigated core scaling, CPU utilization, memory bandwidth, core and uncore frequency, hyper-threading behavior, throughput, IOPS, and package power to understand key-value workload limits.</p>
                 </div>
                 <div class="modal-footer">
                     <a href="https://github.com/nishutam94/nishanttamrakar" class="btn" target="_blank" rel="noopener">View public portfolio repository</a>
@@ -789,8 +825,8 @@
                     <img class="img-res" src="assets/img/portfolio-4.jpg" alt="">
                 </div>
                 <div class="modal-body">
-                    <h4 class="modal-title">Platform debugging</h4>
-                    <p>Root-cause investigations across memory, storage, networking, PCIe, virtualization, and kernel-facing accelerator paths, using telemetry and regression evidence to separate workload effects from platform defects.</p>
+                    <h4 class="modal-title">Qdrant and vector database performance</h4>
+                    <p>Characterized vector-search query throughput against CPU utilization, memory bandwidth, cache behavior, core scaling, and frequency sensitivity to identify the resources that shape response and throughput.</p>
                 </div>
                 <div class="modal-footer">
                     <a href="https://github.com/nishutam94/nishanttamrakar" class="btn" target="_blank" rel="noopener">View public portfolio repository</a>
@@ -807,8 +843,8 @@
                     <img class="img-res" src="assets/img/portfolio-3.jpg" alt="">
                 </div>
                 <div class="modal-body">
-                    <h4 class="modal-title">Proxy workload validation</h4>
-                    <p>Real-world proxy workloads and IP-level micro-benchmarks designed to validate functionality, quantify performance, and demonstrate the value of new data movement capabilities.</p>
+                    <h4 class="modal-title">MLC memory and cache characterization</h4>
+                    <p>Used MLC-style micro-benchmarks to study memory latency, cache behavior, bandwidth, frequency, and platform sensitivity under controlled conditions.</p>
                 </div>
                 <div class="modal-footer">
                     <a href="https://github.com/nishutam94/nishanttamrakar" class="btn" target="_blank" rel="noopener">View public portfolio repository</a>
@@ -825,8 +861,8 @@
                     <img class="img-res" src="assets/img/portfolio-5.jpg" alt="">
                 </div>
                 <div class="modal-body">
-                    <h4 class="modal-title">Multi-node ML automation</h4>
-                    <p>Automation for TensorFlow, MXNet, and PyTorch workloads that coordinates execution and system health across 10+ nodes from one master node, with telemetry, profiling, and report artifacts attached to each run.</p>
+                    <h4 class="modal-title">ML inference performance</h4>
+                    <p>Optimized TensorFlow recommendation models and BERT inference with OpenVINO through graph optimization, operator pruning, feature fusion, VNNI-aware execution, and FP32/INT8 trade-offs. Improved FP32 throughput by up to 30% and BERT inference speed by 15% with minimal accuracy loss.</p>
                 </div>
                 <div class="modal-footer">
                     <a href="https://github.com/nishutam94/nishanttamrakar" class="btn" target="_blank" rel="noopener">View public portfolio repository</a>
@@ -843,8 +879,8 @@
                     <img class="img-res" src="assets/img/portfolio-6.jpg" alt="">
                 </div>
                 <div class="modal-body">
-                    <h4 class="modal-title">Telemetry-led analysis</h4>
-                    <p>A telemetry-driven method for correlating throughput with CPU utilization, frequency, memory bandwidth, cache behavior, uncore activity, and power while tracking more than 300 performance KPIs.</p>
+                    <h4 class="modal-title">Platform and kernel debugging</h4>
+                    <p>Root-cause investigations across Linux, kernel-facing accelerator paths, PCIe, networking, storage, and QEMU/KVM virtualization, using telemetry and regression evidence to separate workload effects from platform defects.</p>
                 </div>
                 <div class="modal-footer">
                     <a href="https://github.com/nishutam94/nishanttamrakar" class="btn" target="_blank" rel="noopener">View public portfolio repository</a>
@@ -861,8 +897,8 @@
                     <img class="img-res" src="assets/img/portfolio-7.jpg" alt="">
                 </div>
                 <div class="modal-body">
-                    <h4 class="modal-title">Kernel micro-benchmarks</h4>
-                    <p>Linux kernel and IP-level test suites that validate functionality and performance across multiple server generations, with targeted debugging for high-impact failures.</p>
+                    <h4 class="modal-title">Multi-node automation</h4>
+                    <p>Automation for TensorFlow, MXNet, and PyTorch workloads that coordinates execution and system health across 10+ nodes from one master node, with telemetry, profiling, regression testing, and report artifacts attached to each run.</p>
                 </div>
                 <div class="modal-footer">
                     <a href="https://github.com/nishutam94/nishanttamrakar" class="btn" target="_blank" rel="noopener">View public portfolio repository</a>
