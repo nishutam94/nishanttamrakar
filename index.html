@@ -504,114 +504,158 @@
                 <h2>SELECTED ENGINEERING WORK</h2>
                 <p class="section-subtitle"><span>PROBLEM, MEASUREMENT, ROOT CAUSE, VALIDATION</span></p>
 
-                <div class="case-studies">
+                <div class="portfolio">
+                    <ul class="portfolio-sorting list-inline">
+                        <li><a href="#" class=" active" data-group="all">all</a></li>
+                        <li><a href="#" class="" data-group="platform">Platform</a></li>
+                        <li><a href="#" class="" data-group="workloads">Workloads</a></li>
+                        <li><a href="#" class="" data-group="automation">Automation</a></li>
+                    </ul><!-- /.portfolio-sorting  -->
 
-                    <article class="case-study">
-                        <div class="case-study-index">01</div>
-                        <div class="case-study-body">
-                            <h3>CPU scaling &amp; bottleneck analysis</h3>
-                            <p class="case-study-question">Does throughput keep pace with added CPU cores, or does it plateau?</p>
-                            <div class="case-study-grid">
-                                <div><span>Problem</span><p>Determine whether workload throughput scales with increasing CPU core count and identify where scaling efficiency begins to degrade.</p></div>
-                                <div><span>Measurement</span><p>Throughput, CPU utilization, core count, CPU frequency, memory bandwidth, NUMA/SNC placement, and EMON/PMU counters.</p></div>
-                                <div><span>Root cause</span><p>Correlated the throughput curve with CPU utilization and memory-system behavior to determine whether the workload was CPU-bound, memory-bound, or limited elsewhere.</p></div>
-                                <div><span>Validation</span><p>Repeated the experiment across multiple core counts and confirmed the identified bottleneck moved consistently with the expected hardware signal.</p></div>
+                    <div id="grid">
+
+                        <!-- Portfolio item -->
+                        <div class="col-md-3 col-sm-4 col-xs-6" data-groups='["platform"]'>
+                            <div class="portfolio-item">
+                                <div class="portfolio-item-panel">
+                                    <span class="portfolio-item-tag">Platform</span>
+                                    <ul class="portfolio-item-signals">
+                                        <li>Throughput</li>
+                                        <li>CPU utilization</li>
+                                        <li>Memory bandwidth</li>
+                                        <li>EMON / PMU</li>
+                                    </ul>
+                                </div><!-- /.portfolio-item-panel -->
+                                <div class="portfolio-info">
+                                    <h3>CPU scaling &amp; bottleneck analysis</h3>
+                                    <p>Core scaling and telemetry</p>
+                                    <a href="#" class="portfolio-item-more" data-toggle="modal" data-target="#portfolioItem1">View details <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+                                </div><!-- /.portfolio-info  -->
                             </div>
-                            <p class="case-study-result"><strong>Result —</strong> Scaling efficiency was not uniform across the core-count range; EMON telemetry showed the limiting subsystem shifting as core count increased.</p>
-                        </div>
-                    </article>
+                        </div><!-- /.col-md-3  -->
 
-                    <article class="case-study">
-                        <div class="case-study-index">02</div>
-                        <div class="case-study-body">
-                            <h3>Core vs. uncore frequency sensitivity</h3>
-                            <p class="case-study-question">Does raising core frequency move the needle, or is the workload gated elsewhere?</p>
-                            <div class="case-study-grid">
-                                <div><span>Problem</span><p>Determine whether increasing core frequency produces a meaningful performance improvement, separate from uncore/memory sensitivity.</p></div>
-                                <div><span>Measurement</span><p>Core frequency, uncore frequency, throughput, CPU utilization, memory bandwidth, and package power.</p></div>
-                                <div><span>Root cause</span><p>Varied core frequency and uncore frequency independently to isolate which one the workload actually responded to.</p></div>
-                                <div><span>Validation</span><p>Repeated the comparison across multiple uncore-frequency points to confirm the response tracked core frequency rather than another variable.</p></div>
+                        <!-- Portfolio item -->
+                        <div class="col-md-3 col-sm-4 col-xs-6" data-groups='["platform"]'>
+                            <div class="portfolio-item">
+                                <div class="portfolio-item-panel">
+                                    <span class="portfolio-item-tag">Platform</span>
+                                    <ul class="portfolio-item-signals">
+                                        <li>Core frequency</li>
+                                        <li>Uncore frequency</li>
+                                        <li>Throughput</li>
+                                        <li>Package power</li>
+                                    </ul>
+                                </div><!-- /.portfolio-item-panel -->
+                                <div class="portfolio-info">
+                                    <h3>Core vs. uncore frequency sensitivity</h3>
+                                    <p>Frequency and power tuning</p>
+                                    <a href="#" class="portfolio-item-more" data-toggle="modal" data-target="#portfolioItem2">View details <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+                                </div><!-- /.portfolio-info  -->
                             </div>
-                            <p class="case-study-result"><strong>Result —</strong> Workload throughput tracked core-frequency changes more closely than uncore-frequency changes, identifying the available platform-tuning lever.</p>
-                        </div>
-                    </article>
+                        </div><!-- /.col-md-3  -->
 
-                    <article class="case-study">
-                        <div class="case-study-index">03</div>
-                        <div class="case-study-body">
-                            <h3>NUMA / SNC topology scaling</h3>
-                            <p class="case-study-question">Does crossing die or NUMA boundaries change the performance story?</p>
-                            <div class="case-study-grid">
-                                <div><span>Problem</span><p>Determine whether workload performance changes measurably when scaling across dies or NUMA/SNC domains.</p></div>
-                                <div><span>Measurement</span><p>Throughput, CPU utilization, memory bandwidth, NUMA placement, frequency, and EMON counters across core-count boundaries.</p></div>
-                                <div><span>Root cause</span><p>Compared scaling efficiency within a single NUMA/SNC domain against scaling that crossed domain boundaries.</p></div>
-                                <div><span>Validation</span><p>Repeated the comparison across each boundary to confirm the pattern was consistent rather than incidental.</p></div>
+                        <!-- Portfolio item -->
+                        <div class="col-md-3 col-sm-4 col-xs-6" data-groups='["platform"]'>
+                            <div class="portfolio-item">
+                                <div class="portfolio-item-panel">
+                                    <span class="portfolio-item-tag">Platform</span>
+                                    <ul class="portfolio-item-signals">
+                                        <li>NUMA placement</li>
+                                        <li>Throughput</li>
+                                        <li>Memory bandwidth</li>
+                                        <li>EMON counters</li>
+                                    </ul>
+                                </div><!-- /.portfolio-item-panel -->
+                                <div class="portfolio-info">
+                                    <h3>NUMA / SNC topology scaling</h3>
+                                    <p>Topology-aware scaling</p>
+                                    <a href="#" class="portfolio-item-more" data-toggle="modal" data-target="#portfolioItem3">View details <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+                                </div><!-- /.portfolio-info  -->
                             </div>
-                            <p class="case-study-result"><strong>Result —</strong> Scaling efficiency measurably changed when crossing domain boundaries, showing the workload is sensitive to platform topology, not just raw core count.</p>
-                        </div>
-                    </article>
+                        </div><!-- /.col-md-3  -->
 
-                    <article class="case-study">
-                        <div class="case-study-index">04</div>
-                        <div class="case-study-body">
-                            <h3>Redis / memtier characterization</h3>
-                            <p class="case-study-question">What actually limits Redis/memtier throughput as resources increase?</p>
-                            <div class="case-study-grid">
-                                <div><span>Problem</span><p>Understand what limits Redis/memtier performance as CPU and memory resources increase, including the effect of hyper-threading.</p></div>
-                                <div><span>Measurement</span><p>Throughput/IOPS, CPU utilization, core count, core and uncore frequency, memory bandwidth, package power, and HT on/off.</p></div>
-                                <div><span>Root cause</span><p>Changed one variable at a time — cores, frequency, HT state — to determine whether the limit was CPU execution, memory bandwidth, or thread-level contention.</p></div>
-                                <div><span>Validation</span><p>Repeated key comparisons, including HT on vs. HT off, to confirm the response was consistent with the suspected bottleneck.</p></div>
+                        <!-- Portfolio item -->
+                        <div class="col-md-3 col-sm-4 col-xs-6" data-groups='["workloads"]'>
+                            <div class="portfolio-item">
+                                <div class="portfolio-item-panel">
+                                    <span class="portfolio-item-tag">Workloads</span>
+                                    <ul class="portfolio-item-signals">
+                                        <li>Throughput / IOPS</li>
+                                        <li>Core count</li>
+                                        <li>HT on / off</li>
+                                        <li>Package power</li>
+                                    </ul>
+                                </div><!-- /.portfolio-item-panel -->
+                                <div class="portfolio-info">
+                                    <h3>Redis / memtier characterization</h3>
+                                    <p>Throughput, HT, and bandwidth</p>
+                                    <a href="#" class="portfolio-item-more" data-toggle="modal" data-target="#portfolioItem4">View details <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+                                </div><!-- /.portfolio-info  -->
                             </div>
-                            <p class="case-study-result"><strong>Result —</strong> The dominant constraint varied with configuration; HT did not uniformly improve throughput, and the limiting resource shifted between CPU and memory bandwidth.</p>
-                        </div>
-                    </article>
+                        </div><!-- /.col-md-3  -->
 
-                    <article class="case-study">
-                        <div class="case-study-index">05</div>
-                        <div class="case-study-body">
-                            <h3>ML inference optimization</h3>
-                            <p class="case-study-question">Can inference throughput improve without giving up model quality?</p>
-                            <div class="case-study-grid">
-                                <div><span>Problem</span><p>Improve inference throughput for recommendation and BERT models while preserving accuracy.</p></div>
-                                <div><span>Measurement</span><p>Inference latency, throughput, CPU utilization, operator-level execution, precision, and model accuracy.</p></div>
-                                <div><span>Root cause</span><p>Identified inefficient graph operations and evaluated operator pruning, feature fusion, VNNI-aware execution, and hybrid FP32/INT8 precision.</p></div>
-                                <div><span>Validation</span><p>Compared optimized configurations against the FP32 baseline for both throughput and accuracy.</p></div>
+                        <!-- Portfolio item -->
+                        <div class="col-md-3 col-sm-4 col-xs-6" data-groups='["workloads"]'>
+                            <div class="portfolio-item">
+                                <div class="portfolio-item-panel">
+                                    <span class="portfolio-item-tag">Workloads</span>
+                                    <ul class="portfolio-item-signals">
+                                        <li>Inference latency</li>
+                                        <li>Throughput</li>
+                                        <li>Precision</li>
+                                        <li>Accuracy</li>
+                                    </ul>
+                                </div><!-- /.portfolio-item-panel -->
+                                <div class="portfolio-info">
+                                    <h3>ML inference optimization</h3>
+                                    <p>Graph and precision optimization</p>
+                                    <a href="#" class="portfolio-item-more" data-toggle="modal" data-target="#portfolioItem5">View details <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+                                </div><!-- /.portfolio-info  -->
                             </div>
-                            <p class="case-study-result"><strong>Result —</strong> FP32 throughput improved by up to 30%, and BERT inference speed improved by 15% with minimal accuracy loss.</p>
-                        </div>
-                    </article>
+                        </div><!-- /.col-md-3  -->
 
-                    <article class="case-study">
-                        <div class="case-study-index">06</div>
-                        <div class="case-study-body">
-                            <h3>EMON root-cause investigation</h3>
-                            <p class="case-study-question">The application metric moved — what does the hardware say happened?</p>
-                            <div class="case-study-grid">
-                                <div><span>Problem</span><p>A workload shows a change in application-level performance that isn't explained by the application metric alone.</p></div>
-                                <div><span>Measurement</span><p>IPC, TMA, CPU utilization, frequency, memory bandwidth, cache metrics, uncore activity, and power, tracked across more than 300 performance KPIs.</p></div>
-                                <div><span>Root cause</span><p>Correlated the application-level change with hardware telemetry to isolate the responsible subsystem rather than guessing from the symptom alone.</p></div>
-                                <div><span>Validation</span><p>Reproduced the behavior under controlled conditions and confirmed the suspected cause held under repeated runs.</p></div>
+                        <!-- Portfolio item -->
+                        <div class="col-md-3 col-sm-4 col-xs-6" data-groups='["platform"]'>
+                            <div class="portfolio-item">
+                                <div class="portfolio-item-panel">
+                                    <span class="portfolio-item-tag">Platform</span>
+                                    <ul class="portfolio-item-signals">
+                                        <li>IPC / TMA</li>
+                                        <li>Cache metrics</li>
+                                        <li>Uncore activity</li>
+                                        <li>300+ KPIs</li>
+                                    </ul>
+                                </div><!-- /.portfolio-item-panel -->
+                                <div class="portfolio-info">
+                                    <h3>EMON root-cause investigation</h3>
+                                    <p>Telemetry-backed root cause</p>
+                                    <a href="#" class="portfolio-item-more" data-toggle="modal" data-target="#portfolioItem6">View details <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+                                </div><!-- /.portfolio-info  -->
                             </div>
-                            <p class="case-study-result"><strong>Result —</strong> Turned an ambiguous performance symptom into a defensible, telemetry-backed root cause rather than a guess.</p>
-                        </div>
-                    </article>
+                        </div><!-- /.col-md-3  -->
 
-                    <article class="case-study">
-                        <div class="case-study-index">07</div>
-                        <div class="case-study-body">
-                            <h3>Multi-node performance automation</h3>
-                            <p class="case-study-question">How do you get consistent performance data across many systems without manual overhead?</p>
-                            <div class="case-study-grid">
-                                <div><span>Problem</span><p>Running performance workloads and telemetry collection manually across many systems produced slow, inconsistent results.</p></div>
-                                <div><span>Measurement</span><p>Workload results, system health, telemetry, configuration state, and regression outcomes across each node.</p></div>
-                                <div><span>Root cause</span><p>Manual execution introduced inconsistent platform state between runs, making comparisons unreliable.</p></div>
-                                <div><span>Validation</span><p>Ran the same automated workflow repeatedly across nodes and confirmed consistent, comparable output.</p></div>
+                        <!-- Portfolio item -->
+                        <div class="col-md-3 col-sm-4 col-xs-6" data-groups='["automation"]'>
+                            <div class="portfolio-item">
+                                <div class="portfolio-item-panel">
+                                    <span class="portfolio-item-tag">Automation</span>
+                                    <ul class="portfolio-item-signals">
+                                        <li>System health</li>
+                                        <li>Telemetry</li>
+                                        <li>Regression testing</li>
+                                        <li>10+ nodes</li>
+                                    </ul>
+                                </div><!-- /.portfolio-item-panel -->
+                                <div class="portfolio-info">
+                                    <h3>Multi-node performance automation</h3>
+                                    <p>Health, telemetry, and regression</p>
+                                    <a href="#" class="portfolio-item-more" data-toggle="modal" data-target="#portfolioItem7">View details <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+                                </div><!-- /.portfolio-info  -->
                             </div>
-                            <p class="case-study-result"><strong>Result —</strong> Automation coordinated execution and system health across 10+ nodes from a single master node, replacing manual per-node handling.</p>
-                        </div>
-                    </article>
+                        </div><!-- /.col-md-3  -->
 
-                </div><!-- /.case-studies -->
+                    </div><!-- /#grid -->
+                </div>
             </div>
         </section><!-- /.section-works -->
         <!-- End Works section --> 
@@ -698,6 +742,224 @@
 
     </footer><!-- /#footer -->
     <!-- End Footer --> 
+
+    <!-- Modals -->
+    <div id="portfolioItem1" class="modal fade fade-scale" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header modal-header-panel">
+                    <a class="rectangle" data-dismiss="modal"><i class="fa fa-times"></i></a>
+                    <span class="modal-header-tag">Platform</span>
+                    <ul class="modal-header-signals">
+                        <li>Throughput</li>
+                        <li>CPU utilization</li>
+                        <li>Memory bandwidth</li>
+                        <li>EMON / PMU</li>
+                    </ul>
+                </div>
+                <div class="modal-body">
+                    <h4 class="modal-title">CPU scaling &amp; bottleneck analysis</h4>
+                    <p class="case-study-question">Does throughput keep pace with added CPU cores, or does it plateau?</p>
+                    <div class="case-study-grid">
+                        <div><span>Problem</span><p>Determine whether workload throughput scales with increasing CPU core count and identify where scaling efficiency begins to degrade.</p></div>
+                        <div><span>Measurement</span><p>Throughput, CPU utilization, core count, CPU frequency, memory bandwidth, NUMA/SNC placement, and EMON/PMU counters.</p></div>
+                        <div><span>Root cause</span><p>Correlated the throughput curve with CPU utilization and memory-system behavior to determine whether the workload was CPU-bound, memory-bound, or limited elsewhere.</p></div>
+                        <div><span>Validation</span><p>Repeated the experiment across multiple core counts and confirmed the identified bottleneck moved consistently with the expected hardware signal.</p></div>
+                    </div>
+                    <p class="case-study-result"><strong>Result —</strong> Scaling efficiency was not uniform across the core-count range; EMON telemetry showed the limiting subsystem shifting as core count increased.</p>
+                </div>
+                <div class="modal-footer">
+                    <a href="https://github.com/nishutam94/nishanttamrakar" class="btn" target="_blank" rel="noopener">View public portfolio repository</a>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+    <div id="portfolioItem2" class="modal fade fade-scale" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header modal-header-panel">
+                    <a class="rectangle" data-dismiss="modal"><i class="fa fa-times"></i></a>
+                    <span class="modal-header-tag">Platform</span>
+                    <ul class="modal-header-signals">
+                        <li>Core frequency</li>
+                        <li>Uncore frequency</li>
+                        <li>Throughput</li>
+                        <li>Package power</li>
+                    </ul>
+                </div>
+                <div class="modal-body">
+                    <h4 class="modal-title">Core vs. uncore frequency sensitivity</h4>
+                    <p class="case-study-question">Does raising core frequency move the needle, or is the workload gated elsewhere?</p>
+                    <div class="case-study-grid">
+                        <div><span>Problem</span><p>Determine whether increasing core frequency produces a meaningful performance improvement, separate from uncore/memory sensitivity.</p></div>
+                        <div><span>Measurement</span><p>Core frequency, uncore frequency, throughput, CPU utilization, memory bandwidth, and package power.</p></div>
+                        <div><span>Root cause</span><p>Varied core frequency and uncore frequency independently to isolate which one the workload actually responded to.</p></div>
+                        <div><span>Validation</span><p>Repeated the comparison across multiple uncore-frequency points to confirm the response tracked core frequency rather than another variable.</p></div>
+                    </div>
+                    <p class="case-study-result"><strong>Result —</strong> Workload throughput tracked core-frequency changes more closely than uncore-frequency changes, identifying the available platform-tuning lever.</p>
+                </div>
+                <div class="modal-footer">
+                    <a href="https://github.com/nishutam94/nishanttamrakar" class="btn" target="_blank" rel="noopener">View public portfolio repository</a>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+    <div id="portfolioItem3" class="modal fade fade-scale" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header modal-header-panel">
+                    <a class="rectangle" data-dismiss="modal"><i class="fa fa-times"></i></a>
+                    <span class="modal-header-tag">Platform</span>
+                    <ul class="modal-header-signals">
+                        <li>NUMA placement</li>
+                        <li>Throughput</li>
+                        <li>Memory bandwidth</li>
+                        <li>EMON counters</li>
+                    </ul>
+                </div>
+                <div class="modal-body">
+                    <h4 class="modal-title">NUMA / SNC topology scaling</h4>
+                    <p class="case-study-question">Does crossing die or NUMA boundaries change the performance story?</p>
+                    <div class="case-study-grid">
+                        <div><span>Problem</span><p>Determine whether workload performance changes measurably when scaling across dies or NUMA/SNC domains.</p></div>
+                        <div><span>Measurement</span><p>Throughput, CPU utilization, memory bandwidth, NUMA placement, frequency, and EMON counters across core-count boundaries.</p></div>
+                        <div><span>Root cause</span><p>Compared scaling efficiency within a single NUMA/SNC domain against scaling that crossed domain boundaries.</p></div>
+                        <div><span>Validation</span><p>Repeated the comparison across each boundary to confirm the pattern was consistent rather than incidental.</p></div>
+                    </div>
+                    <p class="case-study-result"><strong>Result —</strong> Scaling efficiency measurably changed when crossing domain boundaries, showing the workload is sensitive to platform topology, not just raw core count.</p>
+                </div>
+                <div class="modal-footer">
+                    <a href="https://github.com/nishutam94/nishanttamrakar" class="btn" target="_blank" rel="noopener">View public portfolio repository</a>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+    <div id="portfolioItem4" class="modal fade fade-scale" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header modal-header-panel">
+                    <a class="rectangle" data-dismiss="modal"><i class="fa fa-times"></i></a>
+                    <span class="modal-header-tag">Workloads</span>
+                    <ul class="modal-header-signals">
+                        <li>Throughput / IOPS</li>
+                        <li>Core count</li>
+                        <li>HT on / off</li>
+                        <li>Package power</li>
+                    </ul>
+                </div>
+                <div class="modal-body">
+                    <h4 class="modal-title">Redis / memtier characterization</h4>
+                    <p class="case-study-question">What actually limits Redis/memtier throughput as resources increase?</p>
+                    <div class="case-study-grid">
+                        <div><span>Problem</span><p>Understand what limits Redis/memtier performance as CPU and memory resources increase, including the effect of hyper-threading.</p></div>
+                        <div><span>Measurement</span><p>Throughput/IOPS, CPU utilization, core count, core and uncore frequency, memory bandwidth, package power, and HT on/off.</p></div>
+                        <div><span>Root cause</span><p>Changed one variable at a time — cores, frequency, HT state — to determine whether the limit was CPU execution, memory bandwidth, or thread-level contention.</p></div>
+                        <div><span>Validation</span><p>Repeated key comparisons, including HT on vs. HT off, to confirm the response was consistent with the suspected bottleneck.</p></div>
+                    </div>
+                    <p class="case-study-result"><strong>Result —</strong> The dominant constraint varied with configuration; HT did not uniformly improve throughput, and the limiting resource shifted between CPU and memory bandwidth.</p>
+                </div>
+                <div class="modal-footer">
+                    <a href="https://github.com/nishutam94/nishanttamrakar" class="btn" target="_blank" rel="noopener">View public portfolio repository</a>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+    <div id="portfolioItem5" class="modal fade fade-scale" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header modal-header-panel">
+                    <a class="rectangle" data-dismiss="modal"><i class="fa fa-times"></i></a>
+                    <span class="modal-header-tag">Workloads</span>
+                    <ul class="modal-header-signals">
+                        <li>Inference latency</li>
+                        <li>Throughput</li>
+                        <li>Precision</li>
+                        <li>Accuracy</li>
+                    </ul>
+                </div>
+                <div class="modal-body">
+                    <h4 class="modal-title">ML inference optimization</h4>
+                    <p class="case-study-question">Can inference throughput improve without giving up model quality?</p>
+                    <div class="case-study-grid">
+                        <div><span>Problem</span><p>Improve inference throughput for recommendation and BERT models while preserving accuracy.</p></div>
+                        <div><span>Measurement</span><p>Inference latency, throughput, CPU utilization, operator-level execution, precision, and model accuracy.</p></div>
+                        <div><span>Root cause</span><p>Identified inefficient graph operations and evaluated operator pruning, feature fusion, VNNI-aware execution, and hybrid FP32/INT8 precision.</p></div>
+                        <div><span>Validation</span><p>Compared optimized configurations against the FP32 baseline for both throughput and accuracy.</p></div>
+                    </div>
+                    <p class="case-study-result"><strong>Result —</strong> FP32 throughput improved by up to 30%, and BERT inference speed improved by 15% with minimal accuracy loss.</p>
+                </div>
+                <div class="modal-footer">
+                    <a href="https://github.com/nishutam94/nishanttamrakar" class="btn" target="_blank" rel="noopener">View public portfolio repository</a>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+    <div id="portfolioItem6" class="modal fade fade-scale" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header modal-header-panel">
+                    <a class="rectangle" data-dismiss="modal"><i class="fa fa-times"></i></a>
+                    <span class="modal-header-tag">Platform</span>
+                    <ul class="modal-header-signals">
+                        <li>IPC / TMA</li>
+                        <li>Cache metrics</li>
+                        <li>Uncore activity</li>
+                        <li>300+ KPIs</li>
+                    </ul>
+                </div>
+                <div class="modal-body">
+                    <h4 class="modal-title">EMON root-cause investigation</h4>
+                    <p class="case-study-question">The application metric moved — what does the hardware say happened?</p>
+                    <div class="case-study-grid">
+                        <div><span>Problem</span><p>A workload shows a change in application-level performance that isn't explained by the application metric alone.</p></div>
+                        <div><span>Measurement</span><p>IPC, TMA, CPU utilization, frequency, memory bandwidth, cache metrics, uncore activity, and power, tracked across more than 300 performance KPIs.</p></div>
+                        <div><span>Root cause</span><p>Correlated the application-level change with hardware telemetry to isolate the responsible subsystem rather than guessing from the symptom alone.</p></div>
+                        <div><span>Validation</span><p>Reproduced the behavior under controlled conditions and confirmed the suspected cause held under repeated runs.</p></div>
+                    </div>
+                    <p class="case-study-result"><strong>Result —</strong> Turned an ambiguous performance symptom into a defensible, telemetry-backed root cause rather than a guess.</p>
+                </div>
+                <div class="modal-footer">
+                    <a href="https://github.com/nishutam94/nishanttamrakar" class="btn" target="_blank" rel="noopener">View public portfolio repository</a>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+    <div id="portfolioItem7" class="modal fade fade-scale" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header modal-header-panel">
+                    <a class="rectangle" data-dismiss="modal"><i class="fa fa-times"></i></a>
+                    <span class="modal-header-tag">Automation</span>
+                    <ul class="modal-header-signals">
+                        <li>System health</li>
+                        <li>Telemetry</li>
+                        <li>Regression testing</li>
+                        <li>10+ nodes</li>
+                    </ul>
+                </div>
+                <div class="modal-body">
+                    <h4 class="modal-title">Multi-node performance automation</h4>
+                    <p class="case-study-question">How do you get consistent performance data across many systems without manual overhead?</p>
+                    <div class="case-study-grid">
+                        <div><span>Problem</span><p>Running performance workloads and telemetry collection manually across many systems produced slow, inconsistent results.</p></div>
+                        <div><span>Measurement</span><p>Workload results, system health, telemetry, configuration state, and regression outcomes across each node.</p></div>
+                        <div><span>Root cause</span><p>Manual execution introduced inconsistent platform state between runs, making comparisons unreliable.</p></div>
+                        <div><span>Validation</span><p>Ran the same automated workflow repeatedly across nodes and confirmed consistent, comparable output.</p></div>
+                    </div>
+                    <p class="case-study-result"><strong>Result —</strong> Automation coordinated execution and system health across 10+ nodes from a single master node, replacing manual per-node handling.</p>
+                </div>
+                <div class="modal-footer">
+                    <a href="https://github.com/nishutam94/nishanttamrakar" class="btn" target="_blank" rel="noopener">View public portfolio repository</a>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
