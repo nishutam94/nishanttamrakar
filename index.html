@@ -100,7 +100,6 @@
                         <li class="page-scroll"><a href="#works">Selected Work</a></li>
                         <li class="page-scroll"><a href="#experience">Experience</a></li>
                         <li class="page-scroll"><a href="#patents">Patents</a></li>
-                        <li class="page-scroll"><a href="#contact">Contact</a></li>
                         
                     </ul><!-- /.navbar-nav -->
 
@@ -685,49 +684,45 @@
 
                 <div class="patents-grid">
                     <article class="patent-card">
-                        <span class="patent-card-tag">Patent / Innovation</span>
+                        <span class="patent-card-tag">Patent 01</span>
                         <h3>Enhancing Memory-Based Workload Performance with Intel Hardware Acceleration</h3>
                         <p>A holistic approach to improving memory-intensive workload performance by combining Intel hardware acceleration, intelligent workload distribution, and software-level optimization. The approach targets memory utilization and CPU bottlenecks to improve overall system performance.</p>
                         <ul class="patent-card-areas">
                             <li>Intel Hardware Acceleration</li>
                             <li>Memory-Intensive Workloads</li>
                             <li>CPU Bottleneck Mitigation</li>
-                            <li>Intelligent Load Distribution</li>
+                            <li>Load Distribution</li>
                             <li>Software Optimization</li>
                             <li>Performance Optimization</li>
                         </ul>
                     </article>
 
-                    <article class="patent-card patent-card-placeholder">
-                        <span class="patent-card-tag">Patent / Innovation</span>
-                        <h3>[PATENT 2 TITLE]</h3>
-                        <p>[PATENT 2 DESCRIPTION]</p>
+                    <article class="patent-card">
+                        <span class="patent-card-tag">Patent 02</span>
+                        <h3>Dynamic NUMA-Aware IRQ Scheduling Using Predictive Load Balancing for Network Traffic</h3>
+                        <p>A NUMA-aware approach to dynamically scheduling network IRQs using predictive load balancing. The approach addresses CPU hot-spotting caused by uneven network interrupt distribution while balancing NUMA locality against CPU load. It is designed to improve IRQ responsiveness and network performance under high packet rates by anticipating workload bursts rather than relying solely on static or reactive IRQ distribution.</p>
                         <ul class="patent-card-areas">
-                            <li>[PATENT 2 TECHNICAL AREAS]</li>
+                            <li>NUMA</li>
+                            <li>IRQ Scheduling</li>
+                            <li>Network Performance</li>
+                            <li>Predictive Load Balancing</li>
+                            <li>NIC</li>
+                            <li>RSS / RFS / irqbalance</li>
+                            <li>CPU Load Balancing</li>
+                            <li>High PPS Workloads</li>
+                            <li>Tail Latency</li>
                         </ul>
+                        <details class="patent-card-details">
+                            <summary>Technical Challenge</summary>
+                            <p>Modern NUMA servers commonly process NIC-generated interrupts on CPUs local to the NIC's NUMA node to preserve memory locality. Under uneven or bursty network traffic, this can create CPU hot spots while other NUMA nodes remain underutilized. CPU saturation can increase IRQ latency, packet drops, and tail-latency variability.</p>
+                            <p>Existing mechanisms such as RSS, RFS, and irqbalance primarily provide static or reactive distribution. The proposed approach focuses on dynamically balancing NUMA locality and CPU load while accounting for changing traffic patterns.</p>
+                        </details>
                     </article>
                 </div>
             </div>
         </section>
         <!-- End Patents section -->
 
-        <!-- Contacts section --> 
-
-
-        <section class="site-section section-contact" id="contact">
-            <div class="container">
-                <h2>LET'S DISCUSS PERFORMANCE ENGINEERING</h2>
-                <p class="section-subtitle"><span>WORKLOADS, PLATFORMS, AND ROOT CAUSE</span></p>
-                <div class="contact-links">
-                    <a href="https://github.com/nishutam94" target="_blank" rel="noopener"><i class="fa fa-github" aria-hidden="true"></i><span>GitHub</span></a>
-                    <a href="https://www.linkedin.com/in/nishant-tamrakar/" target="_blank" rel="noopener"><i class="fa fa-linkedin" aria-hidden="true"></i><span>LinkedIn</span></a>
-                    <span class="contact-link"><i class="fa fa-envelope" aria-hidden="true"></i><span>Email available on request</span></span>
-                    <a href="#experience"><i class="fa fa-file-text-o" aria-hidden="true"></i><span>Experience</span></a>
-                </div>
-            </div>
-        </section><!-- /.section-contact-->
-        <!-- End Contacts section --> 
-        
         <!-- Social Networks section --> 
         <section class="section-networks blue-bg">
             <div class="container">
@@ -759,7 +754,6 @@
                 <li class="page-scroll"><a href="#works">Selected Work</a></li>
                 <li class="page-scroll"><a href="#experience">Experience</a></li>
                 <li class="page-scroll"><a href="#patents">Patents</a></li>
-                <li class="page-scroll"><a href="#contact">Contact</a></li>
             </ul>
 
             <div class="page-scroll">
