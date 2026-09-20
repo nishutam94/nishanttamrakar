@@ -99,7 +99,6 @@
                         <li class="page-scroll"><a href="#methodology">Methodology</a></li>
                         <li class="page-scroll"><a href="#works">Selected Work</a></li>
                         <li class="page-scroll"><a href="#experience">Experience</a></li>
-                        <li class="page-scroll"><a href="#stack">Systems Stack</a></li>
                         <li class="page-scroll"><a href="#contact">Contact</a></li>
                         <li class="nav-social"><a href="https://github.com/nishutam94" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa fa-github" aria-hidden="true"></i></a></li>
                         <li class="nav-social"><a href="https://www.linkedin.com/in/nishant-tamrakar/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
@@ -368,45 +367,6 @@
         </section><!-- /.section-methodology -->
         <!-- End Methodology section -->
 
-        <!-- Performance metrics section -->
-        <section class="site-section section-metrics" id="metrics">
-            <div class="container">
-                <h2>PERFORMANCE METRICS</h2>
-                <p class="section-subtitle"><span>APPLICATION SIGNALS CORRELATED WITH PLATFORM BEHAVIOR</span></p>
-                <div class="metrics-flow">
-                    <div class="metric-layer"><strong>Application</strong><span>Throughput / RPS / IOPS / Latency</span></div>
-                    <div class="metric-arrow">↓</div>
-                    <div class="metric-layer"><strong>CPU</strong><span>Utilization / IPC / Frequency / TMA</span></div>
-                    <div class="metric-arrow">↓</div>
-                    <div class="metric-layer"><strong>Memory</strong><span>Bandwidth / Latency / NUMA</span></div>
-                    <div class="metric-arrow">↓</div>
-                    <div class="metric-layer"><strong>Cache</strong><span>L1 / L2 / LLC / MPI</span></div>
-                    <div class="metric-arrow">↓</div>
-                    <div class="metric-layer"><strong>Platform</strong><span>Uncore / PCIe / I/O</span></div>
-                    <div class="metric-arrow">↓</div>
-                    <div class="metric-layer"><strong>Power</strong><span>Package power / Performance-per-watt</span></div>
-                </div>
-            </div>
-        </section>
-        <!-- End Performance metrics section -->
-
-        <!-- Systems stack section -->
-        <section class="site-section section-stack" id="stack">
-            <div class="container">
-                <h2>SYSTEMS STACK</h2>
-                <p class="section-subtitle"><span>THE COMPLETE PATH FROM APPLICATION TO TELEMETRY</span></p>
-                <div class="stack-grid">
-                    <div class="stack-layer"><span class="stack-index">01</span><div><h3>Application</h3><p>ML / Databases / Vector Search / Proxy Workloads</p></div></div>
-                    <div class="stack-layer"><span class="stack-index">02</span><div><h3>Runtime</h3><p>TensorFlow / OpenVINO / Redis / Qdrant</p></div></div>
-                    <div class="stack-layer"><span class="stack-index">03</span><div><h3>Operating system</h3><p>Linux / Linux kernel / Device drivers</p></div></div>
-                    <div class="stack-layer"><span class="stack-index">04</span><div><h3>Virtualization</h3><p>QEMU / KVM / TDX</p></div></div>
-                    <div class="stack-layer"><span class="stack-index">05</span><div><h3>Hardware</h3><p>Intel Xeon / CPU / Cache / Memory / Uncore / PCIe</p></div></div>
-                    <div class="stack-layer"><span class="stack-index">06</span><div><h3>Telemetry</h3><p>EMON / PMU / TMA / Performance Counters</p></div></div>
-                </div>
-            </div>
-        </section>
-        <!-- End Systems stack section -->
-
         <!-- Reviews section -->
         
         <!-- End Reviews section -->
@@ -544,167 +504,114 @@
                 <h2>SELECTED ENGINEERING WORK</h2>
                 <p class="section-subtitle"><span>PROBLEM, MEASUREMENT, ROOT CAUSE, VALIDATION</span></p>
 
-                <div class="portfolio">
-                    <ul class="portfolio-sorting list-inline">
-                        <li><a href="#" class=" active" data-group="all">all</a></li>
-                        <li><a href="#" class="" data-group="webdesign">Platform</a></li>
-                        <li><a href="#" class="" data-group="webdev">Workloads</a></li>
-                        <li><a href="#" class="" data-group="mobileapps">Automation</a></li>
-                    </ul><!-- /.portfolio-sorting  -->
+                <div class="case-studies">
 
-                    <div id="grid">
-                        
-                        <!-- Portfolio item --> 
-                        <div class="col-md-3 col-sm-4 col-xs-6" data-groups='["webdesign"]'>
-                            <div class="portfolio-item">
-                                <div class="portfolio-item-panel">
-                                    <span class="portfolio-item-tag">Platform</span>
-                                    <ul class="portfolio-item-signals">
-                                        <li>Throughput</li>
-                                        <li>CPU utilization</li>
-                                        <li>Memory bandwidth</li>
-                                        <li>NUMA/SNC + EMON</li>
-                                    </ul>
-                                </div><!-- /.portfolio-item-panel -->
-                                <div class="portfolio-info">
-                                    <h3>CPU scaling &amp; platform characterization</h3>
-                                    <p>Core scaling and telemetry</p>
-                                    <a href="#" class="portfolio-item-more" data-toggle="modal" data-target="#portfolioItem1">View details <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
-                                </div><!-- /.portfolio-info  -->
+                    <article class="case-study">
+                        <div class="case-study-index">01</div>
+                        <div class="case-study-body">
+                            <h3>CPU scaling &amp; bottleneck analysis</h3>
+                            <p class="case-study-question">Does throughput keep pace with added CPU cores, or does it plateau?</p>
+                            <div class="case-study-grid">
+                                <div><span>Problem</span><p>Determine whether workload throughput scales with increasing CPU core count and identify where scaling efficiency begins to degrade.</p></div>
+                                <div><span>Measurement</span><p>Throughput, CPU utilization, core count, CPU frequency, memory bandwidth, NUMA/SNC placement, and EMON/PMU counters.</p></div>
+                                <div><span>Root cause</span><p>Correlated the throughput curve with CPU utilization and memory-system behavior to determine whether the workload was CPU-bound, memory-bound, or limited elsewhere.</p></div>
+                                <div><span>Validation</span><p>Repeated the experiment across multiple core counts and confirmed the identified bottleneck moved consistently with the expected hardware signal.</p></div>
                             </div>
-                        </div><!-- /.col-md-3  -->
-                        <!-- Portfolio item -->
-                        <div class="col-md-3 col-sm-4 col-xs-6" data-groups='["webdev"]'>
-                            <div class="portfolio-item">
-                                <div class="portfolio-item-panel">
-                                    <span class="portfolio-item-tag">Workloads</span>
-                                    <ul class="portfolio-item-signals">
-                                        <li>Core scaling</li>
-                                        <li>Core / uncore frequency</li>
-                                        <li>Throughput / IOPS</li>
-                                        <li>Package power</li>
-                                    </ul>
-                                </div><!-- /.portfolio-item-panel -->
-                                <div class="portfolio-info">
-                                    <h3>Redis / memtier performance</h3>
-                                    <p>Throughput, frequency, and power</p>
-                                    <a href="#" class="portfolio-item-more" data-toggle="modal" data-target="#portfolioItem2">View details <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
-                                </div><!-- /.portfolio-info  -->
-                            </div>
-                        </div><!-- /.col-md-3  -->
-                        <!-- Portfolio item -->
-                        <div class="col-md-3 col-sm-4 col-xs-6" data-groups='["mobileapps"]'>
-                            <div class="portfolio-item">
-                                <div class="portfolio-item-panel">
-                                    <span class="portfolio-item-tag">Automation</span>
-                                    <ul class="portfolio-item-signals">
-                                        <li>Query throughput</li>
-                                        <li>CPU utilization</li>
-                                        <li>Memory bandwidth</li>
-                                        <li>Cache behavior</li>
-                                    </ul>
-                                </div><!-- /.portfolio-item-panel -->
-                                <div class="portfolio-info">
-                                    <h3>Qdrant / vector database</h3>
-                                    <p>Query throughput and cache</p>
-                                    <a href="#" class="portfolio-item-more" data-toggle="modal" data-target="#portfolioItem3">View details <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
-                                </div><!-- /.portfolio-info  -->
-                            </div>
-                        </div><!-- /.col-md-3  -->
-                        <!-- Portfolio item -->
-                        <div class="col-md-3 col-sm-4 col-xs-6" data-groups='["webdev"]'>
-                            <div class="portfolio-item">
-                                <div class="portfolio-item-panel">
-                                    <span class="portfolio-item-tag">Workloads</span>
-                                    <ul class="portfolio-item-signals">
-                                        <li>Memory latency</li>
-                                        <li>Cache behavior</li>
-                                        <li>Bandwidth</li>
-                                        <li>Frequency sensitivity</li>
-                                    </ul>
-                                </div>
-                                <div class="portfolio-info">
-                                    <h3>MLC memory characterization</h3>
-                                    <p>Latency, bandwidth, and cache</p>
-                                    <a href="#" class="portfolio-item-more" data-toggle="modal" data-target="#portfolioItem4">View details <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
-                                </div>
-                            </div>
+                            <p class="case-study-result"><strong>Result —</strong> Scaling efficiency was not uniform across the core-count range; EMON telemetry showed the limiting subsystem shifting as core count increased.</p>
                         </div>
-                        <div class="col-md-3 col-sm-4 col-xs-6" data-groups='["webdev"]'>
-                            <div class="portfolio-item">
-                                <div class="portfolio-item-panel">
-                                    <span class="portfolio-item-tag">Workloads</span>
-                                    <ul class="portfolio-item-signals">
-                                        <li>Graph optimization</li>
-                                        <li>Operator pruning</li>
-                                        <li>VNNI-aware execution</li>
-                                        <li>FP32 / INT8</li>
-                                    </ul>
-                                </div>
-                                <div class="portfolio-info">
-                                    <h3>ML inference performance</h3>
-                                    <p>Graph and precision optimization</p>
-                                    <a href="#" class="portfolio-item-more" data-toggle="modal" data-target="#portfolioItem5">View details <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-3 col-sm-4 col-xs-6" data-groups='["webdesign"]'>
-                            <div class="portfolio-item">
-                                <div class="portfolio-item-panel">
-                                    <span class="portfolio-item-tag">Platform</span>
-                                    <ul class="portfolio-item-signals">
-                                        <li>Linux kernel</li>
-                                        <li>PCIe / networking / storage</li>
-                                        <li>QEMU/KVM virtualization</li>
-                                        <li>Regression evidence</li>
-                                    </ul>
-                                </div>
-                                <div class="portfolio-info">
-                                    <h3>Platform / kernel debugging</h3>
-                                    <p>Linux, PCIe, and virtualization</p>
-                                    <a href="#" class="portfolio-item-more" data-toggle="modal" data-target="#portfolioItem6">View details <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-3 col-sm-4 col-xs-6" data-groups='["mobileapps"]'>
-                            <div class="portfolio-item">
-                                <div class="portfolio-item-panel">
-                                    <span class="portfolio-item-tag">Automation</span>
-                                    <ul class="portfolio-item-signals">
-                                        <li>10+ node execution</li>
-                                        <li>System health checks</li>
-                                        <li>Telemetry / profiling</li>
-                                        <li>Regression testing</li>
-                                    </ul>
-                                </div>
-                                <div class="portfolio-info">
-                                    <h3>Multi-node automation</h3>
-                                    <p>Health, telemetry, and regression</p>
-                                    <a href="#" class="portfolio-item-more" data-toggle="modal" data-target="#portfolioItem7">View details <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-3 col-sm-4 col-xs-6" data-groups='["webdesign"]'>
-                            <div class="portfolio-item">
-                                <div class="portfolio-item-panel">
-                                    <span class="portfolio-item-tag">Platform</span>
-                                    <ul class="portfolio-item-signals">
-                                        <li>Signal correlation</li>
-                                        <li>Root cause</li>
-                                        <li>Trade-offs</li>
-                                        <li>Next experiment</li>
-                                    </ul>
-                                </div>
-                                <div class="portfolio-info">
-                                    <h3>Performance reporting</h3>
-                                    <p>Evidence-based decisions</p>
-                                    <a href="#" class="portfolio-item-more" data-toggle="modal" data-target="#portfolioItem8">View details <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
-                                </div>
-                            </div>
-                        </div>
+                    </article>
 
-                    </div><!-- /#grid -->
-                </div>
+                    <article class="case-study">
+                        <div class="case-study-index">02</div>
+                        <div class="case-study-body">
+                            <h3>Core vs. uncore frequency sensitivity</h3>
+                            <p class="case-study-question">Does raising core frequency move the needle, or is the workload gated elsewhere?</p>
+                            <div class="case-study-grid">
+                                <div><span>Problem</span><p>Determine whether increasing core frequency produces a meaningful performance improvement, separate from uncore/memory sensitivity.</p></div>
+                                <div><span>Measurement</span><p>Core frequency, uncore frequency, throughput, CPU utilization, memory bandwidth, and package power.</p></div>
+                                <div><span>Root cause</span><p>Varied core frequency and uncore frequency independently to isolate which one the workload actually responded to.</p></div>
+                                <div><span>Validation</span><p>Repeated the comparison across multiple uncore-frequency points to confirm the response tracked core frequency rather than another variable.</p></div>
+                            </div>
+                            <p class="case-study-result"><strong>Result —</strong> Workload throughput tracked core-frequency changes more closely than uncore-frequency changes, identifying the available platform-tuning lever.</p>
+                        </div>
+                    </article>
+
+                    <article class="case-study">
+                        <div class="case-study-index">03</div>
+                        <div class="case-study-body">
+                            <h3>NUMA / SNC topology scaling</h3>
+                            <p class="case-study-question">Does crossing die or NUMA boundaries change the performance story?</p>
+                            <div class="case-study-grid">
+                                <div><span>Problem</span><p>Determine whether workload performance changes measurably when scaling across dies or NUMA/SNC domains.</p></div>
+                                <div><span>Measurement</span><p>Throughput, CPU utilization, memory bandwidth, NUMA placement, frequency, and EMON counters across core-count boundaries.</p></div>
+                                <div><span>Root cause</span><p>Compared scaling efficiency within a single NUMA/SNC domain against scaling that crossed domain boundaries.</p></div>
+                                <div><span>Validation</span><p>Repeated the comparison across each boundary to confirm the pattern was consistent rather than incidental.</p></div>
+                            </div>
+                            <p class="case-study-result"><strong>Result —</strong> Scaling efficiency measurably changed when crossing domain boundaries, showing the workload is sensitive to platform topology, not just raw core count.</p>
+                        </div>
+                    </article>
+
+                    <article class="case-study">
+                        <div class="case-study-index">04</div>
+                        <div class="case-study-body">
+                            <h3>Redis / memtier characterization</h3>
+                            <p class="case-study-question">What actually limits Redis/memtier throughput as resources increase?</p>
+                            <div class="case-study-grid">
+                                <div><span>Problem</span><p>Understand what limits Redis/memtier performance as CPU and memory resources increase, including the effect of hyper-threading.</p></div>
+                                <div><span>Measurement</span><p>Throughput/IOPS, CPU utilization, core count, core and uncore frequency, memory bandwidth, package power, and HT on/off.</p></div>
+                                <div><span>Root cause</span><p>Changed one variable at a time — cores, frequency, HT state — to determine whether the limit was CPU execution, memory bandwidth, or thread-level contention.</p></div>
+                                <div><span>Validation</span><p>Repeated key comparisons, including HT on vs. HT off, to confirm the response was consistent with the suspected bottleneck.</p></div>
+                            </div>
+                            <p class="case-study-result"><strong>Result —</strong> The dominant constraint varied with configuration; HT did not uniformly improve throughput, and the limiting resource shifted between CPU and memory bandwidth.</p>
+                        </div>
+                    </article>
+
+                    <article class="case-study">
+                        <div class="case-study-index">05</div>
+                        <div class="case-study-body">
+                            <h3>ML inference optimization</h3>
+                            <p class="case-study-question">Can inference throughput improve without giving up model quality?</p>
+                            <div class="case-study-grid">
+                                <div><span>Problem</span><p>Improve inference throughput for recommendation and BERT models while preserving accuracy.</p></div>
+                                <div><span>Measurement</span><p>Inference latency, throughput, CPU utilization, operator-level execution, precision, and model accuracy.</p></div>
+                                <div><span>Root cause</span><p>Identified inefficient graph operations and evaluated operator pruning, feature fusion, VNNI-aware execution, and hybrid FP32/INT8 precision.</p></div>
+                                <div><span>Validation</span><p>Compared optimized configurations against the FP32 baseline for both throughput and accuracy.</p></div>
+                            </div>
+                            <p class="case-study-result"><strong>Result —</strong> FP32 throughput improved by up to 30%, and BERT inference speed improved by 15% with minimal accuracy loss.</p>
+                        </div>
+                    </article>
+
+                    <article class="case-study">
+                        <div class="case-study-index">06</div>
+                        <div class="case-study-body">
+                            <h3>EMON root-cause investigation</h3>
+                            <p class="case-study-question">The application metric moved — what does the hardware say happened?</p>
+                            <div class="case-study-grid">
+                                <div><span>Problem</span><p>A workload shows a change in application-level performance that isn't explained by the application metric alone.</p></div>
+                                <div><span>Measurement</span><p>IPC, TMA, CPU utilization, frequency, memory bandwidth, cache metrics, uncore activity, and power, tracked across more than 300 performance KPIs.</p></div>
+                                <div><span>Root cause</span><p>Correlated the application-level change with hardware telemetry to isolate the responsible subsystem rather than guessing from the symptom alone.</p></div>
+                                <div><span>Validation</span><p>Reproduced the behavior under controlled conditions and confirmed the suspected cause held under repeated runs.</p></div>
+                            </div>
+                            <p class="case-study-result"><strong>Result —</strong> Turned an ambiguous performance symptom into a defensible, telemetry-backed root cause rather than a guess.</p>
+                        </div>
+                    </article>
+
+                    <article class="case-study">
+                        <div class="case-study-index">07</div>
+                        <div class="case-study-body">
+                            <h3>Multi-node performance automation</h3>
+                            <p class="case-study-question">How do you get consistent performance data across many systems without manual overhead?</p>
+                            <div class="case-study-grid">
+                                <div><span>Problem</span><p>Running performance workloads and telemetry collection manually across many systems produced slow, inconsistent results.</p></div>
+                                <div><span>Measurement</span><p>Workload results, system health, telemetry, configuration state, and regression outcomes across each node.</p></div>
+                                <div><span>Root cause</span><p>Manual execution introduced inconsistent platform state between runs, making comparisons unreliable.</p></div>
+                                <div><span>Validation</span><p>Ran the same automated workflow repeatedly across nodes and confirmed consistent, comparable output.</p></div>
+                            </div>
+                            <p class="case-study-result"><strong>Result —</strong> Automation coordinated execution and system health across 10+ nodes from a single master node, replacing manual per-node handling.</p>
+                        </div>
+                    </article>
+
+                </div><!-- /.case-studies -->
             </div>
         </section><!-- /.section-works -->
         <!-- End Works section --> 
@@ -774,7 +681,6 @@
                 <li class="page-scroll"><a href="#methodology">Methodology</a></li>
                 <li class="page-scroll"><a href="#works">Selected Work</a></li>
                 <li class="page-scroll"><a href="#experience">Experience</a></li>
-                <li class="page-scroll"><a href="#stack">Systems Stack</a></li>
                 <li class="page-scroll"><a href="#contact">Contact</a></li>
             </ul>
 
@@ -792,199 +698,6 @@
 
     </footer><!-- /#footer -->
     <!-- End Footer --> 
-
-    <!-- Modals -->
-    <div id="portfolioItem1" class="modal fade fade-scale" role="dialog">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header modal-header-panel">
-                    <a class="rectangle" data-dismiss="modal"><i class="fa fa-times"></i></a>
-                    <span class="modal-header-tag">Platform</span>
-                    <ul class="modal-header-signals">
-                        <li>Throughput</li>
-                        <li>CPU utilization</li>
-                        <li>Memory bandwidth</li>
-                        <li>NUMA/SNC + EMON</li>
-                    </ul>
-                </div>
-                <div class="modal-body">
-                    <h4 class="modal-title">CPU scaling and platform characterization</h4>
-                    <p>Characterized workload scaling from low to high core counts using throughput, CPU utilization, memory bandwidth, frequency, NUMA/SNC behavior, and EMON telemetry to determine whether the workload was CPU-, memory-, or platform-limited.</p>
-                </div>
-                <div class="modal-footer">
-                    <a href="https://github.com/nishutam94/nishanttamrakar" class="btn" target="_blank" rel="noopener">View public portfolio repository</a>
-                </div>
-            </div><!-- /.modal-content -->
-        </div><!-- /.modal-dialog -->
-    </div><!-- /.modal -->
-
-    <div id="portfolioItem2" class="modal fade fade-scale" role="dialog">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header modal-header-panel">
-                    <a class="rectangle" data-dismiss="modal"><i class="fa fa-times"></i></a>
-                    <span class="modal-header-tag">Workloads</span>
-                    <ul class="modal-header-signals">
-                        <li>Core scaling</li>
-                        <li>Core / uncore frequency</li>
-                        <li>Throughput / IOPS</li>
-                        <li>Package power</li>
-                    </ul>
-                </div>
-                <div class="modal-body">
-                    <h4 class="modal-title">Redis and memtier performance</h4>
-                    <p>Investigated core scaling, CPU utilization, memory bandwidth, core and uncore frequency, hyper-threading behavior, throughput, IOPS, and package power to understand key-value workload limits.</p>
-                </div>
-                <div class="modal-footer">
-                    <a href="https://github.com/nishutam94/nishanttamrakar" class="btn" target="_blank" rel="noopener">View public portfolio repository</a>
-                </div>
-            </div><!-- /.modal-content -->
-        </div><!-- /.modal-dialog -->
-    </div><!-- /.modal -->
-
-    <div id="portfolioItem3" class="modal fade fade-scale" role="dialog">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header modal-header-panel">
-                    <a class="rectangle" data-dismiss="modal"><i class="fa fa-times"></i></a>
-                    <span class="modal-header-tag">Automation</span>
-                    <ul class="modal-header-signals">
-                        <li>Query throughput</li>
-                        <li>CPU utilization</li>
-                        <li>Memory bandwidth</li>
-                        <li>Cache behavior</li>
-                    </ul>
-                </div>
-                <div class="modal-body">
-                    <h4 class="modal-title">Qdrant and vector database performance</h4>
-                    <p>Characterized vector-search query throughput against CPU utilization, memory bandwidth, cache behavior, core scaling, and frequency sensitivity to identify the resources that shape response and throughput.</p>
-                </div>
-                <div class="modal-footer">
-                    <a href="https://github.com/nishutam94/nishanttamrakar" class="btn" target="_blank" rel="noopener">View public portfolio repository</a>
-                </div>
-            </div><!-- /.modal-content -->
-        </div><!-- /.modal-dialog -->
-    </div><!-- /.modal -->
-
-    <div id="portfolioItem4" class="modal fade fade-scale" role="dialog">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header modal-header-panel">
-                    <a class="rectangle" data-dismiss="modal"><i class="fa fa-times"></i></a>
-                    <span class="modal-header-tag">Workloads</span>
-                    <ul class="modal-header-signals">
-                        <li>Memory latency</li>
-                        <li>Cache behavior</li>
-                        <li>Bandwidth</li>
-                        <li>Frequency sensitivity</li>
-                    </ul>
-                </div>
-                <div class="modal-body">
-                    <h4 class="modal-title">MLC memory and cache characterization</h4>
-                    <p>Used MLC-style micro-benchmarks to study memory latency, cache behavior, bandwidth, frequency, and platform sensitivity under controlled conditions.</p>
-                </div>
-                <div class="modal-footer">
-                    <a href="https://github.com/nishutam94/nishanttamrakar" class="btn" target="_blank" rel="noopener">View public portfolio repository</a>
-                </div>
-            </div><!-- /.modal-content -->
-        </div><!-- /.modal-dialog -->
-    </div><!-- /.modal -->
-
-    <div id="portfolioItem5" class="modal fade fade-scale" role="dialog">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header modal-header-panel">
-                    <a class="rectangle" data-dismiss="modal"><i class="fa fa-times"></i></a>
-                    <span class="modal-header-tag">Workloads</span>
-                    <ul class="modal-header-signals">
-                        <li>Graph optimization</li>
-                        <li>Operator pruning</li>
-                        <li>VNNI-aware execution</li>
-                        <li>FP32 / INT8</li>
-                    </ul>
-                </div>
-                <div class="modal-body">
-                    <h4 class="modal-title">ML inference performance</h4>
-                    <p>Optimized TensorFlow recommendation models and BERT inference with OpenVINO through graph optimization, operator pruning, feature fusion, VNNI-aware execution, and FP32/INT8 trade-offs. Improved FP32 throughput by up to 30% and BERT inference speed by 15% with minimal accuracy loss.</p>
-                </div>
-                <div class="modal-footer">
-                    <a href="https://github.com/nishutam94/nishanttamrakar" class="btn" target="_blank" rel="noopener">View public portfolio repository</a>
-                </div>
-            </div><!-- /.modal-content -->
-        </div><!-- /.modal-dialog -->
-    </div><!-- /.modal -->
-
-    <div id="portfolioItem6" class="modal fade fade-scale" role="dialog">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header modal-header-panel">
-                    <a class="rectangle" data-dismiss="modal"><i class="fa fa-times"></i></a>
-                    <span class="modal-header-tag">Platform</span>
-                    <ul class="modal-header-signals">
-                        <li>Linux kernel</li>
-                        <li>PCIe / networking / storage</li>
-                        <li>QEMU/KVM virtualization</li>
-                        <li>Regression evidence</li>
-                    </ul>
-                </div>
-                <div class="modal-body">
-                    <h4 class="modal-title">Platform and kernel debugging</h4>
-                    <p>Root-cause investigations across Linux, kernel-facing accelerator paths, PCIe, networking, storage, and QEMU/KVM virtualization, using telemetry and regression evidence to separate workload effects from platform defects.</p>
-                </div>
-                <div class="modal-footer">
-                    <a href="https://github.com/nishutam94/nishanttamrakar" class="btn" target="_blank" rel="noopener">View public portfolio repository</a>
-                </div>
-            </div><!-- /.modal-content -->
-        </div><!-- /.modal-dialog -->
-    </div><!-- /.modal -->
-
-    <div id="portfolioItem7" class="modal fade fade-scale" role="dialog">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header modal-header-panel">
-                    <a class="rectangle" data-dismiss="modal"><i class="fa fa-times"></i></a>
-                    <span class="modal-header-tag">Automation</span>
-                    <ul class="modal-header-signals">
-                        <li>10+ node execution</li>
-                        <li>System health checks</li>
-                        <li>Telemetry / profiling</li>
-                        <li>Regression testing</li>
-                    </ul>
-                </div>
-                <div class="modal-body">
-                    <h4 class="modal-title">Multi-node automation</h4>
-                    <p>Automation for TensorFlow, MXNet, and PyTorch workloads that coordinates execution and system health across 10+ nodes from one master node, with telemetry, profiling, regression testing, and report artifacts attached to each run.</p>
-                </div>
-                <div class="modal-footer">
-                    <a href="https://github.com/nishutam94/nishanttamrakar" class="btn" target="_blank" rel="noopener">View public portfolio repository</a>
-                </div>
-            </div><!-- /.modal-content -->
-        </div><!-- /.modal-dialog -->
-    </div><!-- /.modal -->
-
-    <div id="portfolioItem8" class="modal fade fade-scale" role="dialog">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header modal-header-panel">
-                    <a class="rectangle" data-dismiss="modal"><i class="fa fa-times"></i></a>
-                    <span class="modal-header-tag">Platform</span>
-                    <ul class="modal-header-signals">
-                        <li>Signal correlation</li>
-                        <li>Root cause</li>
-                        <li>Trade-offs</li>
-                        <li>Next experiment</li>
-                    </ul>
-                </div>
-                <div class="modal-body">
-                    <h4 class="modal-title">Performance investigations</h4>
-                    <p>Report-ready analysis that explains what changed, where the time went, which signals support the conclusion, and what experiment should happen next.</p>
-                </div>
-                <div class="modal-footer">
-                    <a href="https://github.com/nishutam94/nishanttamrakar" class="btn" target="_blank" rel="noopener">View public portfolio repository</a>
-                </div>
-            </div><!-- /.modal-content -->
-        </div><!-- /.modal-dialog -->
-    </div><!-- /.modal -->
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
