@@ -92,8 +92,7 @@ html, body {
 /* 
  * Rectangle 
  */
-.rectangle,
-.big-rectangle {
+.rectangle {
   display: inline-block;
   width: 50px;
   height: 50px;
@@ -110,7 +109,6 @@ html, body {
 }
 
 .rectangle i,
-.big-rectangle img,
 .rectangle span,
 .rectangle img {
   position: absolute;
@@ -122,27 +120,6 @@ html, body {
   -moz-transform: translate(-50%, -50%) rotate(-45deg);
   -o-transform: translate(-50%, -50%) rotate(-45deg);
   -ms-transform: translate(-50%, -50%) rotate(-45deg);
-}
-
-.big-rectangle {
-  position: absolute;
-  right: auto;
-  top: 50%;
-  left: 50%;
-  margin: 0 auto;
-  width: 230px;
-  height: 230px;
-  background-color: #196fc2;
-  border: 0;
-  transform: translate(-50%, -50%) rotate(45deg);
-  -webkit-transform: translate(-50%, -50%) rotate(45deg);
-  -moz-transform: translate(-50%, -50%) rotate(45deg);
-  -o-transform: translate(-50%, -50%) rotate(45deg);
-  -ms-transform: translate(-50%, -50%) rotate(45deg);
-  -webkit-box-shadow: 10px 10px 0px 0px #dddddd;
-  -o-box-shadow: 10px 10px 0px 0px #dddddd;
-  -moz-box-shadow: 10px 10px 0px 0px #dddddd;
-  box-shadow: 10px 10px 0px 0px #dddddd;
 }
 
 .medium-rectangle {
@@ -712,96 +689,70 @@ html, body {
 }
 
 /* Section: Hello */
-.section-hello .row {
-  margin-top: 70px;
+.section-lead {
+  max-width: 780px;
+  margin: 30px auto 0;
+  color: #445059;
+  font-size: 14px;
+  line-height: 1.8;
+  text-align: center;
 }
 
-.section-hello .col-sm-4 {
-  min-height: 325px;
+.method-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 26px;
+  margin-top: 55px;
 }
 
-.main-service {
-  position: relative;
-  padding: 35px 0;
-  min-height: 180px;
+.method-card {
+  padding: 28px 26px;
+  border: 1px solid #e1e7eb;
+  background-color: #ffffff;
+  transition: border-color 0.25s ease-in-out, box-shadow 0.25s ease-in-out;
 }
 
-.main-service .rectangle {
-  position: absolute;
-  right: 5px;
-  top: 50%;
-  transform: translateY(-50%) rotate(45deg);
-  -webkit-transform: translateY(-50%) rotate(45deg);
-  -moz-transform: translateY(-50%) rotate(45deg);
-  -o-transform: translateY(-50%) rotate(45deg);
-  -ms-transform: translateY(-50%) rotate(45deg);
+.method-card:hover {
+  border-color: #42b883;
+  box-shadow: 0 6px 18px rgba(16, 43, 63, 0.08);
 }
 
-.main-service.text-right {
-  padding-right: 90px;
-}
-
-.main-service.text-left {
-  padding-left: 90px;
-}
-
-.main-service.text-left .rectangle {
-  right: auto;
-  left: 5px;
-}
-
-.main-service h3 {
-  margin: 0;
-  font-size: 16px;
-  text-transform: uppercase;
+.method-card h3 {
+  margin: 0 0 12px;
+  color: #102b3f;
+  font-size: 15px;
   font-weight: 700;
+  text-transform: uppercase;
 }
 
-.main-service p {
-  margin: 25px 0 0;
+.method-card p {
+  margin: 0 0 16px;
+  color: #445059;
   font-size: 12px;
+  line-height: 1.7;
 }
 
-@media only screen and (max-width: 1199px) {
-  /* Section: Hello */
-  .main-service {
-    padding: 25px 0;
-  }
+.method-card-tags {
+  margin: 0 !important;
+  color: #196fc2 !important;
+  font-family: monospace;
+  font-size: 11px !important;
+  letter-spacing: .3px;
+  text-transform: uppercase;
 }
 
 @media only screen and (max-width: 991px) {
   /* Section: Hello */
-  .big-rectangle {
-    height: 170px;
-    width: 170px;
-  }
-  .main-service {
-    padding: 20px 0;
-  }
-  .main-service h3 {
-    font-size: 14px;
-  }
-  .main-service.text-right {
-    padding-right: 75px;
-  }
-  .main-service.text-left {
-    padding-left: 75px;
+  .method-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media only screen and (max-width: 767px) {
   /* Section: Hello */
-  .section-hello .row {
+  .method-grid {
+    grid-template-columns: 1fr;
     margin-top: 30px;
-  }
-  .section-hello .col-sm-4 {
-    min-height: 240px;
-  }
-  .section-hello .main-service {
-    min-height: 100%;
-  }
-  .section-hello .main-service p {
-    margin-top: 15px;
   }
 }
 
@@ -2566,6 +2517,7 @@ body {
   grid-template-columns: repeat(2, 1fr);
   gap: 30px;
   margin-top: 50px;
+  align-items: start;
 }
 
 .patent-card {
@@ -2626,19 +2578,40 @@ body {
   text-transform: uppercase;
 }
 
-.patent-card-placeholder {
-  border-style: dashed;
+.patent-card-details {
+  margin-top: 22px;
+  padding-top: 18px;
+  border-top: 1px solid #e1e7eb;
 }
 
-.patent-card-placeholder h3,
-.patent-card-placeholder p {
-  color: #97a3ac;
-  font-style: italic;
+.patent-card-details summary {
+  color: #102b3f;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .3px;
+  text-transform: uppercase;
+  cursor: pointer;
+  outline: none;
 }
 
-.patent-card-placeholder .patent-card-areas li {
-  border-style: dashed;
-  color: #97a3ac;
+.patent-card-details summary::-webkit-details-marker {
+  color: #42b883;
+}
+
+.patent-card-details[open] summary {
+  color: #196fc2;
+  margin-bottom: 14px;
+}
+
+.patent-card-details p {
+  margin: 0 0 14px;
+  color: #667784;
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+.patent-card-details p:last-child {
+  margin-bottom: 0;
 }
 
 @media only screen and (max-width: 767px) {

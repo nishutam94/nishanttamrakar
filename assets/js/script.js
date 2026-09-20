@@ -124,6 +124,12 @@ $(function () {
           setupFilters();
         }, 100);
 
+        // Default to the Platform filter instead of showing all items,
+        // once shuffle has finished its initial layout
+        $grid.one('done.shuffle', function() {
+          $grid.shuffle('shuffle', 'platform');
+        });
+
         // instantiate the plugin
         $grid.shuffle({
           itemSelector: '[class*="col-"]', 

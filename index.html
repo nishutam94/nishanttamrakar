@@ -117,47 +117,64 @@
         <section class="site-section section-hello" id="intro">
 			<div class="container">
                 <h2>WORKLOAD TO ROOT CAUSE</h2>
-                <p class="section-subtitle"><span>MEASURE THE SYSTEM. EXPLAIN THE RESULT.</span></p>
-				<div class="row">
-					<div class="col-sm-4">
-						<div class="main-service text-left">
-							<div class="rectangle">
-								<i class="fa fa-calendar" aria-hidden="true"></i>
-							</div><!-- /.rectangle -->
-                            <h3>Characterize the workload</h3>
-                            <p>I establish workload behavior, scaling, latency, throughput, and sensitivity before interpreting platform data.</p>
-						</div><!-- /.main-service -->
-                        <div class="main-service text-left">
-                            <div class="rectangle">
-                                <i class="fa fa-comments" aria-hidden="true"></i>
-                            </div>
-                            <h3>Measure the platform</h3>
-                            <p>I connect application results to CPU utilization, IPC, frequency, cache, memory bandwidth, NUMA, and power.</p>
-                        </div><!-- /.main-service -->
-					</div>
-					<div class="col-sm-4">
-						<div class="big-rectangle">
-							<img src="assets/img/commitment.png" alt="" >
-                           
-						</div>
-					</div>
-					<div class="col-sm-4">
-                        <div class="main-service text-left">
-                            <div class="rectangle">
-                                <i class="fa fa-check" aria-hidden="true"></i>
-                            </div>
-                            <h3>Find the bottleneck</h3>
-                            <p>I use EMON, PMU counters, TMA signals, and controlled experiments to separate symptoms from limiting subsystems.</p>
-                        </div><!-- /.main-service -->
-						<div class="main-service text-left">
-							<div class="rectangle">
-								<i class="fa fa-list" aria-hidden="true"></i>
-							</div><!-- /.rectangle -->
-                            <h3>Validate the change</h3>
-                            <p>I automate execution, telemetry collection, regression checks, and reporting so improvements remain repeatable.</p>
-						</div><!-- /.main-service -->
-					</div>
-				</div>
+                <p class="section-subtitle"><span>MEASURE THE SYSTEM. EXPLAIN THE RESULT. OPTIMIZE THE WORKLOAD.</span></p>
+                <p class="section-lead">I investigate performance across the full stack—from application workload behavior to CPU architecture, memory, virtualization, and platform telemetry—using controlled experiments, hardware counters, and automation to turn performance symptoms into measurable root causes.</p>
+
+                <div class="method-grid">
+                    <article class="method-card">
+                        <h3>Characterize the workload</h3>
+                        <p>I study how real workloads behave before changing the platform. I analyze throughput, latency, scaling, CPU utilization, memory behavior, and workload sensitivity across ML inference, databases, vector search, and proxy workloads.</p>
+                        <p class="method-card-tags">ML Inference · Redis/memtier · Qdrant · MLC · Proxy Workloads</p>
+                    </article>
+
+                    <article class="method-card">
+                        <h3>Tune the system</h3>
+                        <p>I systematically evaluate CPU frequency, core scaling, NUMA/SNC placement, memory bandwidth, cache behavior, uncore frequency, I/O, Hyper-Threading, and power to identify the platform configuration that best matches the workload.</p>
+                        <p class="method-card-tags">CPU · Memory · Cache · NUMA · Uncore · Power · I/O</p>
+                    </article>
+
+                    <article class="method-card">
+                        <h3>Debug performance regressions</h3>
+                        <p>I use EMON, PMU counters, TMA signals, kernel and system telemetry, and controlled experiments to move from an observed regression to the subsystem responsible for it.</p>
+                        <p class="method-card-tags">IPC · TMA · EMON · PMU · Frequency · Bandwidth · Cache · Power</p>
+                    </article>
+
+                    <article class="method-card">
+                        <h3>Optimize machine-learning workloads</h3>
+                        <p>I optimize inference pipelines by connecting model-level behavior with CPU execution. My work includes graph optimization, operator pruning, feature fusion, VNNI-aware execution, and FP32/INT8 precision strategies.</p>
+                        <p class="method-card-tags">TensorFlow · OpenVINO · VNNI · FP32 · INT8</p>
+                    </article>
+
+                    <article class="method-card">
+                        <h3>Study databases &amp; data-intensive workloads</h3>
+                        <p>I characterize workloads such as Redis/memtier and Qdrant to understand how CPU resources, memory bandwidth, cache behavior, frequency, and system topology affect throughput and latency.</p>
+                        <p class="method-card-tags">Redis · Qdrant · Memory · Cache · CPU Scaling · NUMA</p>
+                    </article>
+
+                    <article class="method-card">
+                        <h3>Analyze virtualization &amp; TDX</h3>
+                        <p>I investigate virtualized and confidential-computing environments, including QEMU/KVM and Intel TDX, by connecting guest workload behavior with host CPU, memory, virtualization, and platform configuration.</p>
+                        <p class="method-card-tags">QEMU · KVM · TDX · Linux · Virtualization Performance</p>
+                    </article>
+
+                    <article class="method-card">
+                        <h3>Automate the investigation</h3>
+                        <p>I build Python/Linux/Bash workflows that automate workload execution, system health checks, telemetry collection, regression detection, multi-node testing, and report generation—making performance experiments repeatable rather than manual.</p>
+                        <p class="method-card-tags">Python · Linux · Bash · Automation · Multi-node Validation</p>
+                    </article>
+
+                    <article class="method-card">
+                        <h3>AI-assisted engineering workflows</h3>
+                        <p>I use <strong>agentic AI and LLM-based interactions</strong> to accelerate engineering workflows—from workload execution and telemetry collection to analysis, investigation, documentation, and report generation—while keeping measurements and engineering decisions grounded in reproducible system data.</p>
+                        <p class="method-card-tags">Agentic AI · LLM Workflows · Engineering Automation · Performance Analysis</p>
+                    </article>
+
+                    <article class="method-card">
+                        <h3>Validate the result</h3>
+                        <p>I don't stop at identifying a bottleneck. I reproduce the behavior, change one or more controlled variables, measure the resulting system response, and validate that the improvement is repeatable.</p>
+                        <p class="method-card-tags">Measure → Hypothesize → Experiment → Optimize → Validate</p>
+                    </article>
+                </div><!-- /.method-grid -->
 			</div>
 		</section><!-- /.section-hello -->
         <!-- End Hello section -->
@@ -505,10 +522,11 @@
 
                 <div class="portfolio">
                     <ul class="portfolio-sorting list-inline">
-                        <li><a href="#" class=" active" data-group="all">all</a></li>
-                        <li><a href="#" class="" data-group="platform">Platform</a></li>
+                        <li><a href="#" class="" data-group="all">all</a></li>
+                        <li><a href="#" class=" active" data-group="platform">Platform</a></li>
                         <li><a href="#" class="" data-group="workloads">Workloads</a></li>
                         <li><a href="#" class="" data-group="automation">Automation</a></li>
+                        <li><a href="#" class="" data-group="investigation">Investigation</a></li>
                     </ul><!-- /.portfolio-sorting  -->
 
                     <div id="grid">
@@ -649,6 +667,66 @@
                                     <h3>Multi-node performance automation</h3>
                                     <p>Health, telemetry, and regression</p>
                                     <a href="#" class="portfolio-item-more" data-toggle="modal" data-target="#portfolioItem7">View details <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+                                </div><!-- /.portfolio-info  -->
+                            </div>
+                        </div><!-- /.col-md-3  -->
+
+                        <!-- Portfolio item -->
+                        <div class="col-md-3 col-sm-4 col-xs-6" data-groups='["investigation"]'>
+                            <div class="portfolio-item">
+                                <div class="portfolio-item-panel">
+                                    <span class="portfolio-item-tag">Investigation</span>
+                                    <ul class="portfolio-item-signals">
+                                        <li>DSA / SNC</li>
+                                        <li>Remote core access</li>
+                                        <li>CCB traffic</li>
+                                        <li>Tiled SoC</li>
+                                    </ul>
+                                </div><!-- /.portfolio-item-panel -->
+                                <div class="portfolio-info">
+                                    <h3>DSA run-to-run variation in SNC mode</h3>
+                                    <p>Remote DSA access inconsistency</p>
+                                    <a href="#" class="portfolio-item-more" data-toggle="modal" data-target="#portfolioItem8">View details <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+                                </div><!-- /.portfolio-info  -->
+                            </div>
+                        </div><!-- /.col-md-3  -->
+
+                        <!-- Portfolio item -->
+                        <div class="col-md-3 col-sm-4 col-xs-6" data-groups='["investigation"]'>
+                            <div class="portfolio-item">
+                                <div class="portfolio-item-panel">
+                                    <span class="portfolio-item-tag">Investigation</span>
+                                    <ul class="portfolio-item-signals">
+                                        <li>DPDK vSwitch</li>
+                                        <li>DSA / NIC offload</li>
+                                        <li>Packet size threshold</li>
+                                        <li>IOPS</li>
+                                    </ul>
+                                </div><!-- /.portfolio-item-panel -->
+                                <div class="portfolio-info">
+                                    <h3>DSA/NIC offload inefficiency for small packets</h3>
+                                    <p>Hybrid CPU/DSA traffic handling</p>
+                                    <a href="#" class="portfolio-item-more" data-toggle="modal" data-target="#portfolioItem9">View details <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+                                </div><!-- /.portfolio-info  -->
+                            </div>
+                        </div><!-- /.col-md-3  -->
+
+                        <!-- Portfolio item -->
+                        <div class="col-md-3 col-sm-4 col-xs-6" data-groups='["investigation"]'>
+                            <div class="portfolio-item">
+                                <div class="portfolio-item-panel">
+                                    <span class="portfolio-item-tag">Investigation</span>
+                                    <ul class="portfolio-item-signals">
+                                        <li>Multi-die SNC</li>
+                                        <li>DSA binding</li>
+                                        <li>Core scaling</li>
+                                        <li>Resource utilization</li>
+                                    </ul>
+                                </div><!-- /.portfolio-item-panel -->
+                                <div class="portfolio-info">
+                                    <h3>Multi-die DSA accessibility gap</h3>
+                                    <p>Local DSA binding across dies</p>
+                                    <a href="#" class="portfolio-item-more" data-toggle="modal" data-target="#portfolioItem10">View details <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
                                 </div><!-- /.portfolio-info  -->
                             </div>
                         </div><!-- /.col-md-3  -->
@@ -999,6 +1077,99 @@
                         <div><span>Validation</span><p>Ran the same automated workflow repeatedly across nodes and confirmed consistent, comparable output.</p></div>
                     </div>
                     <p class="case-study-result"><strong>Result —</strong> Automation coordinated execution and system health across 10+ nodes from a single master node, replacing manual per-node handling.</p>
+                </div>
+                <div class="modal-footer">
+                    <a href="https://github.com/nishutam94/nishanttamrakar" class="btn" target="_blank" rel="noopener">View public portfolio repository</a>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+    <div id="portfolioItem8" class="modal fade fade-scale" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header modal-header-panel">
+                    <a class="rectangle" data-dismiss="modal"><i class="fa fa-times"></i></a>
+                    <span class="modal-header-tag">Investigation</span>
+                    <ul class="modal-header-signals">
+                        <li>DSA / SNC</li>
+                        <li>Remote core access</li>
+                        <li>CCB traffic</li>
+                        <li>Tiled SoC</li>
+                    </ul>
+                </div>
+                <div class="modal-body">
+                    <h4 class="modal-title">DSA run-to-run variation in SNC mode</h4>
+                    <p class="case-study-question">Why does the same workload perform differently from run to run under SNC mode?</p>
+                    <div class="case-study-grid">
+                        <div><span>Problem</span><p>Applications using a remote core to access a Data Streaming Accelerator (DSA) device in Sub-NUMA Cluster (SNC) mode showed performance degradation and run-to-run variation. The SoC's tiled architecture, with a DSA instance per tile, behaved inconsistently when a core accessed a non-local DSA device.</p></div>
+                        <div><span>Measurement</span><p>Performance profiling and benchmark analysis across multiple runs, together with hardware performance counters and system-level tracing of remote core access patterns.</p></div>
+                        <div><span>Root cause</span><p>Remote core access to a non-local DSA device was the source of the inconsistent performance, hindering effective use of DSA acceleration in SNC mode.</p></div>
+                        <div><span>Validation</span><p>Cross-team analysis of Cross-Component Bus (CCB) traffic confirmed the remote-access pattern as the driver of the run-to-run variation.</p></div>
+                    </div>
+                    <p class="case-study-result"><strong>Result —</strong> Proposed a software-level mechanism for a core to dynamically determine and prioritize its local DSA device, minimizing remote device access and associated latency.</p>
+                </div>
+                <div class="modal-footer">
+                    <a href="https://github.com/nishutam94/nishanttamrakar" class="btn" target="_blank" rel="noopener">View public portfolio repository</a>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+    <div id="portfolioItem9" class="modal fade fade-scale" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header modal-header-panel">
+                    <a class="rectangle" data-dismiss="modal"><i class="fa fa-times"></i></a>
+                    <span class="modal-header-tag">Investigation</span>
+                    <ul class="modal-header-signals">
+                        <li>DPDK vSwitch</li>
+                        <li>DSA / NIC offload</li>
+                        <li>Packet size threshold</li>
+                        <li>IOPS</li>
+                    </ul>
+                </div>
+                <div class="modal-body">
+                    <h4 class="modal-title">DSA/NIC offload inefficiency for small packets</h4>
+                    <p class="case-study-question">Why does IOPS drop specifically for small packets during DSA offload?</p>
+                    <div class="case-study-grid">
+                        <div><span>Problem</span><p>A DPDK vSwitch application showed reduced IOPS during network packet offload between DSA and NIC buffers, specifically with smaller packet sizes.</p></div>
+                        <div><span>Measurement</span><p>Benchmarking and profiling of the DPDK vSwitch application across varying packet sizes, with further investigation into the data path.</p></div>
+                        <div><span>Root cause</span><p>Per-descriptor processing overhead from CPU to DSA — source/destination address transfer, address translation, and operation execution — became significant relative to small packet sizes.</p></div>
+                        <div><span>Validation</span><p>IOPS was shown to decrease disproportionately as packet size decreased, tracing the effect back to descriptor processing overhead in the data path.</p></div>
+                    </div>
+                    <p class="case-study-result"><strong>Result —</strong> Implemented a hybrid traffic approach using a CPU traffic participation variable and a 4KB size threshold: packets smaller than 4KB are processed by the CPU, while larger packets are offloaded to DSA.</p>
+                </div>
+                <div class="modal-footer">
+                    <a href="https://github.com/nishutam94/nishanttamrakar" class="btn" target="_blank" rel="noopener">View public portfolio repository</a>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+    <div id="portfolioItem10" class="modal fade fade-scale" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header modal-header-panel">
+                    <a class="rectangle" data-dismiss="modal"><i class="fa fa-times"></i></a>
+                    <span class="modal-header-tag">Investigation</span>
+                    <ul class="modal-header-signals">
+                        <li>Multi-die SNC</li>
+                        <li>DSA binding</li>
+                        <li>Core scaling</li>
+                        <li>Resource utilization</li>
+                    </ul>
+                </div>
+                <div class="modal-body">
+                    <h4 class="modal-title">Multi-die DSA accessibility gap</h4>
+                    <p class="case-study-question">Why doesn't performance scale linearly across dies in SNC mode?</p>
+                    <div class="case-study-grid">
+                        <div><span>Problem</span><p>In a two-die system configured in SNC mode, DSA instances were connected to die 0 only, making them inaccessible to cores on die 1. This limited the scalability and performance of applications in SNC mode, creating an imbalance in resource utilization and hindering the performance gains expected from DSA in multi-die configurations.</p></div>
+                        <div><span>Measurement</span><p>Core scaling tests across both dies, observing whether performance scaled linearly as cores were added.</p></div>
+                        <div><span>Root cause</span><p>Cores on die 1 had no path to a local DSA instance, since DSA instances were connected only to die 0 — a resource bottleneck that became visible as core count scaled across dies.</p></div>
+                        <div><span>Validation</span><p>Performance did not scale linearly as cores were added across both dies, and further investigation confirmed the lack of DSA accessibility from die 1 as the limiting factor.</p></div>
+                    </div>
+                    <p class="case-study-result"><strong>Result —</strong> Proposed application-level changes — including application-level agreements and modifications to resource allocation mechanisms — to bind applications to the DSA instance local to their die, optimizing performance and resource utilization across the multi-die configuration.</p>
                 </div>
                 <div class="modal-footer">
                     <a href="https://github.com/nishutam94/nishanttamrakar" class="btn" target="_blank" rel="noopener">View public portfolio repository</a>
