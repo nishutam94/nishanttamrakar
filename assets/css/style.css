@@ -2340,30 +2340,6 @@ body {
   letter-spacing: 1px;
 }
 
-.site-navigation .navbar-nav > li.nav-social + li.nav-social > a {
-  margin-left: 12px;
-}
-
-.site-navigation .navbar-nav > li.nav-social > a {
-  padding-bottom: 21px;
-  font-size: 16px;
-  border-bottom: 2px solid transparent;
-}
-
-.site-navigation .navbar-nav > li.nav-social > a:hover {
-  border-color: #42b883;
-}
-
-@media only screen and (max-width: 767px) {
-  .site-navigation .navbar-nav > li.nav-social {
-    display: inline-block;
-  }
-
-  .site-navigation .navbar-nav > li.nav-social + li.nav-social > a {
-    margin-left: 6px;
-  }
-}
-
 .section-hello,
 .section-about,
 .section-services,
