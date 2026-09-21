@@ -122,54 +122,72 @@
 
                 <div class="method-grid">
                     <article class="method-card">
+                        <span class="method-card-index">01</span>
+                        <div class="method-card-icon"><i class="fa fa-search" aria-hidden="true"></i></div>
                         <h3>Characterize the workload</h3>
                         <p>I study how real workloads behave before changing the platform. I analyze throughput, latency, scaling, CPU utilization, memory behavior, and workload sensitivity across ML inference, databases, vector search, and proxy workloads.</p>
                         <p class="method-card-tags">ML Inference · Redis/memtier · Qdrant · MLC · Proxy Workloads</p>
                     </article>
 
                     <article class="method-card">
+                        <span class="method-card-index">02</span>
+                        <div class="method-card-icon"><i class="fa fa-sliders" aria-hidden="true"></i></div>
                         <h3>Tune the system</h3>
                         <p>I systematically evaluate CPU frequency, core scaling, NUMA/SNC placement, memory bandwidth, cache behavior, uncore frequency, I/O, Hyper-Threading, and power to identify the platform configuration that best matches the workload.</p>
                         <p class="method-card-tags">CPU · Memory · Cache · NUMA · Uncore · Power · I/O</p>
                     </article>
 
                     <article class="method-card">
+                        <span class="method-card-index">03</span>
+                        <div class="method-card-icon"><i class="fa fa-bug" aria-hidden="true"></i></div>
                         <h3>Debug performance regressions</h3>
                         <p>I use EMON, PMU counters, TMA signals, kernel and system telemetry, and controlled experiments to move from an observed regression to the subsystem responsible for it.</p>
                         <p class="method-card-tags">IPC · TMA · EMON · PMU · Frequency · Bandwidth · Cache · Power</p>
                     </article>
 
                     <article class="method-card">
+                        <span class="method-card-index">04</span>
+                        <div class="method-card-icon"><i class="fa fa-flask" aria-hidden="true"></i></div>
                         <h3>Optimize machine-learning workloads</h3>
                         <p>I optimize inference pipelines by connecting model-level behavior with CPU execution. My work includes graph optimization, operator pruning, feature fusion, VNNI-aware execution, and FP32/INT8 precision strategies.</p>
                         <p class="method-card-tags">TensorFlow · OpenVINO · VNNI · FP32 · INT8</p>
                     </article>
 
                     <article class="method-card">
+                        <span class="method-card-index">05</span>
+                        <div class="method-card-icon"><i class="fa fa-database" aria-hidden="true"></i></div>
                         <h3>Study databases &amp; data-intensive workloads</h3>
                         <p>I characterize workloads such as Redis/memtier and Qdrant to understand how CPU resources, memory bandwidth, cache behavior, frequency, and system topology affect throughput and latency.</p>
                         <p class="method-card-tags">Redis · Qdrant · Memory · Cache · CPU Scaling · NUMA</p>
                     </article>
 
                     <article class="method-card">
+                        <span class="method-card-index">06</span>
+                        <div class="method-card-icon"><i class="fa fa-lock" aria-hidden="true"></i></div>
                         <h3>Analyze virtualization &amp; TDX</h3>
                         <p>I investigate virtualized and confidential-computing environments, including QEMU/KVM and Intel TDX, by connecting guest workload behavior with host CPU, memory, virtualization, and platform configuration.</p>
                         <p class="method-card-tags">QEMU · KVM · TDX · Linux · Virtualization Performance</p>
                     </article>
 
                     <article class="method-card">
+                        <span class="method-card-index">07</span>
+                        <div class="method-card-icon"><i class="fa fa-terminal" aria-hidden="true"></i></div>
                         <h3>Automate the investigation</h3>
                         <p>I build Python/Linux/Bash workflows that automate workload execution, system health checks, telemetry collection, regression detection, multi-node testing, and report generation—making performance experiments repeatable rather than manual.</p>
                         <p class="method-card-tags">Python · Linux · Bash · Automation · Multi-node Validation</p>
                     </article>
 
                     <article class="method-card">
+                        <span class="method-card-index">08</span>
+                        <div class="method-card-icon"><i class="fa fa-lightbulb-o" aria-hidden="true"></i></div>
                         <h3>AI-assisted engineering workflows</h3>
                         <p>I use <strong>agentic AI and LLM-based interactions</strong> to accelerate engineering workflows—from workload execution and telemetry collection to analysis, investigation, documentation, and report generation—while keeping measurements and engineering decisions grounded in reproducible system data.</p>
                         <p class="method-card-tags">Agentic AI · LLM Workflows · Engineering Automation · Performance Analysis</p>
                     </article>
 
-                    <article class="method-card">
+                    <article class="method-card method-card-accent">
+                        <span class="method-card-index">09</span>
+                        <div class="method-card-icon"><i class="fa fa-check-circle" aria-hidden="true"></i></div>
                         <h3>Validate the result</h3>
                         <p>I don't stop at identifying a bottleneck. I reproduce the behavior, change one or more controlled variables, measure the resulting system response, and validate that the improvement is repeatable.</p>
                         <p class="method-card-tags">Measure → Hypothesize → Experiment → Optimize → Validate</p>
